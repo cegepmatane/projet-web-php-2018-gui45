@@ -1,10 +1,5 @@
 <?php
-	$usager = 'root';
-	$motdepasse = 'admin1';
-	$hote = 'localhost';
-	$base = 'jeux';
-	$dsn = 'mysql:dbname='.$base.';host=' . $hote;
-	$basededonnees = new PDO($dsn, $usager, $motdepasse);
+	include_once "baseDeDonner.php";
 	// je pourrais passer la description en url ,mais elle risque d'etre trop longue car je permet d'avoir 1000 charatere
 	$basededonnees->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 	$requete = $basededonnees->prepare("SELECT * FROM jeuxVideo");
