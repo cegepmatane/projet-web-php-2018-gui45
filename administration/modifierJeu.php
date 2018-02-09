@@ -1,10 +1,5 @@
 <?php
-	$usager = 'root';
-	$motdepasse = 'admin1';
-	$hote = 'localhost';
-	$base = 'jeux';
-	$dsn = 'mysql:dbname='.$base.';host=' . $hote;
-	$basededonnees = new PDO($dsn, $usager, $motdepasse);
+	include"baseDeDonner.php";
 	
 	$id = $_POST['ID']
 	$basededonnees->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
@@ -31,7 +26,7 @@
 	
 	<section id="">
 		<header><h2>ajout dun jeu</h2></header>
-		<form method="POST" action="ajouterUnJeu.php">
+		<form method="POST" action="actionModifier.php">
 			<div>
 				<label for="nom"></label>
 				<input type="text" name="nom" id="nom" value="<?php $item[nom]?>">
