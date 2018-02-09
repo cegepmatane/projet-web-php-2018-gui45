@@ -1,10 +1,5 @@
 <?php
-	$usager = 'root';
-	$motdepasse = 'admin1';
-	$hote = 'localhost';
-	$base = 'jeux';
-	$dsn = 'mysql:dbname='.$base.';host=' . $hote;
-	$basededonnees = new PDO($dsn, $usager, $motdepasse);
+	include_once "baseDeDonner.php";
 	
 	$basededonnees->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 	$requete = $basededonnees->prepare("SELECT * FROM jeuxVideo");

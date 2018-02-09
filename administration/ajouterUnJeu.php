@@ -1,9 +1,9 @@
 <?php
 	include"baseDeDonner.php";
 	
-	$nom = $POST['nom'];
-	$description = $POST['description'];
-	
-	$SQL_AJOUTER_JEU = "INSERT INTO jauxVideo(nom, description) VALUES('". $nom ."','". $description ."')";
+	$nom = $_POST['nom'];
+	$description = $_POST['description'];
+	var_dump($_POST);
+	$SQL_AJOUTER_JEU = "INSERT INTO jeuxVideo(nom, description) VALUES('". $nom ."','". $description ."')";
 	$basededonnees->exec($SQL_AJOUTER_JEU);
 ?>
