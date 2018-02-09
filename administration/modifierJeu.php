@@ -8,7 +8,7 @@
 	
 	$id = $_POST['ID']
 	$basededonnees->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-	$requete = $basededonnees->prepare("SELECT * FROM jeuxVideo WHERE 'ID'=$id ");
+	$requete = $basededonnees->prepare("SELECT * FROM jeuxVideo WHERE ID='"$id"' ");
 	$requete->execute();
 	$jeux = $requete->fetchAll();
 	//	foreach($jeux as $jeu)

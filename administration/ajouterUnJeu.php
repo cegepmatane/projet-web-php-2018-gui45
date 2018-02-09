@@ -7,10 +7,8 @@
 	$basededonnees = new PDO($dsn, $usager, $motdepasse);
 	
 	$nom = $POST['nom'];
-	$nom = $POST['description'];
+	$description = $POST['description'];
 	
-	$SQL_AJOUTER_JEU = "INSERT INTO jeuxVideo(nom, description) 
-	VALUES('". $_POST['nom'] ."','". $_POST['description'])"';
-	echo $SQL_AJOUTER_JEU;
+	$SQL_AJOUTER_JEU = "INSERT INTO jauxVideo(nom, description) VALUES('". $nom ."','". $description ."')";
 	$basededonnees->exec($SQL_AJOUTER_JEU);
-	
+?>
