@@ -1,20 +1,15 @@
 <?php
-	$usager = 'root';
-	$motdepasse = 'admin1';
-	$hote = 'localhost';
-	$base = 'basededonnertest';
-	$dsn = 'mysql:dbname='.$base.';host=' . $hote;
-	$basededonnees = new PDO($dsn, $usager, $motdepasse);
+	include_once "baseDeDonner.php";
 	
-	$id = 1;//$_POST['ID']
+	$id = $_GET['id'];
 	$basededonnees->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-	$requete = $basededonnees->prepare("SELECT * FROM test WHERE ID=".$id);
+	$requete = $basededonnees->prepare("SELECT * FROM jeuxVideo WHERE ID = '". $id ."'" );
 	$requete->execute();
-	$jeux = $requete->fetch();
+	$jeu = $requete->fetch();
 
 	?>
 	
-	<html lang="fr">
+<html lang="fr">
 <head>
 	<meta charset="utf-8">
 	<title></title>
@@ -28,10 +23,11 @@
 	<section id="">
 		<header><h2>suprimer un jeu</h2></header>
 		<form method="POST" action="actionSuprimer.php">
-		<label>voulez vous vraiment suprimer <? //$jeux['nom'];?></label>
-		<input type="hidden" value="<?4;//$id?>">
-			<input type="submit" name="oui" value="oui">
-			<input type="submit" name="non" value="non">
+			<label>voulez vous vraiment suprimer <?=$jeu['Nom']?></label>
+			<input type="hidden" name="id" value="<?=$id?>">
+			<input type="submit" name="valider" value="oui">
+			<input type="submit" name="valider" value="non">
+		</form>
 			
 	</section>
 

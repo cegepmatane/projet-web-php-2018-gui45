@@ -20,7 +20,7 @@
 	
 	<section id="formAjouter">
 		<header><h2>options d'administration</h2></header>
-		
+		<h3><a href="ajouterUnJeu.html">ajouter un jeu</a></h3>
 		<?php
 			foreach($jeux as $jeu)
 			{
