@@ -1,6 +1,7 @@
 <?php
-	include"baseDeDonner.php";
-	$SQL_AJOUTER_JEU = "ALTER TABLE test CHANGE nom ". $POST['nom'] ." TEXT CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL";
-	$requete = $baseDeDonnee->prepare($SQL_EFFACER_JEU);
+	include_once "baseDeDonner.php";
+	$basededonnees->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+	$SQL_EFFACER_JEU = "UPDATE jeuxvideo SET Nom = '". $_POST['nom'] ."', description = '". $_POST['description'] ."' WHERE jeuxvideo.ID = '". $_POST['id'] ."';";
+	$requete = $basededonnees->prepare($SQL_EFFACER_JEU);
 	$requete->execute();
 ?>
