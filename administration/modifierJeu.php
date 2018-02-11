@@ -1,6 +1,6 @@
 <?php
 	include_once "baseDeDonner.php";
-	
+	include"actionModifier.php";
 	$id = $_GET['id'];
 	$basededonnees->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 	$requete = $basededonnees->prepare("SELECT * FROM jeuxVideo WHERE ID = '". $id ."'" );
@@ -26,7 +26,7 @@
 	
 	<section id="sectionFormulaire">
 		<header><h2>ajout dun jeu</h2></header>
-		<form method="POST" action="actionModifier.php">
+		<form method="POST" action="">
 			<div>
 				<label for="nom"></label>
 				<input type="text" name="nom" id="nom" value="<?=$jeu['Nom']?>">
@@ -39,6 +39,7 @@
 			<input type="submit" value="valider">
 			
 	</section>
+	<a href="pageAdministration.php">retour</a>
 
 </body>
 </html>
