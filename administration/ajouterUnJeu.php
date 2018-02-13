@@ -14,7 +14,7 @@
 	
 	<section id="formAjouter">
 		<header><h2>ajout d'un jeu</h2></header>
-		<form method="post" action="">
+		<form method="post" action="pageAdministration.php">
 			<div>
 				<label for="nom"></label>
 				<input type="text" name="nom" id="nom">
@@ -23,7 +23,7 @@
 				<label for="description"></label>
 				<textarea name="description" id="description"></textarea>
 			</div>
-			
+			<input type="hidden" value = "oui" name="ajouter">
 			<input type="submit" value="valider">
 		</form
 	</section>

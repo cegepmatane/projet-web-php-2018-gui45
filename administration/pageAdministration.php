@@ -1,6 +1,8 @@
 <?php
 	include"baseDeDonner.php";
-	
+	include"actionModifier.php";
+	include"actionSuprimer.php";
+	include"actionAjouterUnJeu.php";
 	$basededonnees->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 	$requete = $basededonnees->prepare("SELECT * FROM jeuxVideo");
 	$requete->execute();
@@ -20,7 +22,7 @@
 	
 	<section id="formAjouter">
 		<header><h2>options d'administration</h2></header>
-		<h3><a href="ajouterUnJeu.html">ajouter un jeu</a></h3>
+		<h3><a href="ajouterUnJeu.php">ajouter un jeu</a></h3>
 		<?php
 			foreach($jeux as $jeu)
 			{

@@ -1,6 +1,6 @@
 <?php
 	
-	if(!empty($_POST["nom"]))
+	if(!empty($_POST["ajouter"]))
 	{
 		include"baseDeDonner.php";
 		$nom = $_POST['nom'];

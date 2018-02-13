@@ -26,7 +26,7 @@
 	
 	<section id="sectionFormulaire">
 		<header><h2>ajout dun jeu</h2></header>
-		<form method="POST" action="">
+		<form method="POST" action="pageAdministration.php">
 			<div>
 				<label for="nom"></label>
 				<input type="text" name="nom" id="nom" value="<?=$jeu['Nom']?>">
@@ -36,6 +36,7 @@
 				<textarea name="description" id="description" ><?=$jeu['description']?></textarea>
 			</div>
 			<input type="hidden" name="id" id="id" value="<?=$jeu['ID']?>">
+			<input type="hidden" value = "oui" name="modifier">
 			<input type="submit" value="valider">
 			
 	</section>

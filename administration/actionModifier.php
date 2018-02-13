@@ -1,5 +1,5 @@
 <?php
-	if(!empty($_POST["nom"]))
+	if(!empty($_POST["modifier"]))
 	{
 		include_once "baseDeDonner.php";
 		$basededonnees->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
