@@ -3,6 +3,7 @@
 	include"actionModifier.php";
 	include"actionSuprimer.php";
 	include"actionAjouterUnJeu.php";
+	include"../dao/DAO.php";
 	$basededonnees->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 	$requete = $basededonnees->prepare("SELECT * FROM jeuxVideo");
 	$requete->execute();

@@ -1,10 +1,7 @@
 <?php
-	include_once "baseDeDonner.php";
-	
-	$basededonnees->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-	$requete = $basededonnees->prepare("SELECT * FROM jeuxVideo");
-	$requete->execute();
-	$jeux = $requete->fetchAll();
+	include_once"dao/DAO.php";
+	$jeuDao = new JeuDAO();
+	$jeux = $jeuDao->lireListe();
 	//print_r($jeux);
 ?>
 <html lang="fr">
