@@ -1,13 +1,15 @@
 
 <?php
-	$choi = $_POST['valider'];
-	if($choi == "oui"){
-		include_once "baseDeDonner.php";
-		$id = $_POST['id'];
-		//var_dump($choi);
-		$SQL_EFFACER_JEU = "DELETE FROM jeuxVideo WHERE ID = '". $id ."'";
-		$requete = $basededonnees->prepare($SQL_EFFACER_JEU);
-		$requete->execute();
-		echo("<p>jeu suprimer</p>");
+	if(!empty($_POST['valider'])){
+		if($_POST['valider'] == "oui")
+		{
+			include_once"../dao/DAO.php";
+			
+			$id = $_POST['id'];
+			$jeuDao = new JeuDAO();
+			$jeuDao->suprimer($id);
+			
+			echo("<p>jeu suprimer</p>");
+		}
 	}
 ?>

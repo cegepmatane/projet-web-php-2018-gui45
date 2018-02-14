@@ -1,11 +1,10 @@
 <?php
-	include_once "baseDeDonner.php";
-	include"actionSuprimer.php";
+	include_once"../dao/DAO.php";
+	
 	$id = $_GET['id'];
-	$basededonnees->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-	$requete = $basededonnees->prepare("SELECT * FROM jeuxVideo WHERE ID = '". $id ."'" );
-	$requete->execute();
-	$jeu = $requete->fetch();
+	$jeuDao = new JeuDAO();
+	$id = $_GET['id'];
+	$jeu= $jeuDao->lireJeu($id);
 
 	?>
 	

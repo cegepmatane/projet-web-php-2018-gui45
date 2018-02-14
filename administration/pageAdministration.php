@@ -1,13 +1,13 @@
 <?php
+	include_once"../dao/DAO.php";
+	$jeudao = new JeuDAO();
+	$jeux = $jeudao->lireListe();
+	
 	include"baseDeDonner.php";
 	include"actionModifier.php";
 	include"actionSuprimer.php";
 	include"actionAjouterUnJeu.php";
-	include"../dao/DAO.php";
-	$basededonnees->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-	$requete = $basededonnees->prepare("SELECT * FROM jeuxVideo");
-	$requete->execute();
-	$jeux = $requete->fetchAll();
+	
 ?>
 <!doctype html>
 <html lang="fr">

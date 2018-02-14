@@ -2,12 +2,9 @@
 	
 	if(!empty($_POST["ajouter"]))
 	{
-		include"baseDeDonner.php";
-		$nom = $_POST['nom'];
-		$description = $_POST['description'];
-		//var_dump($_POST);
-		$SQL_AJOUTER_JEU = "INSERT INTO jeuxVideo(nom, description) VALUES('". $nom ."','". $description ."')";
-		$basededonnees->exec($SQL_AJOUTER_JEU);
+		include"../dao/DAO.php";
+		$jeuDao = new JeuDAO();
+		$jeuDao->ajouter($_POST['nom'], $_POST['description']);
 		echo("<p>jeu ajouter</p>");
 	}
 ?>
