@@ -1,9 +1,8 @@
 <?php
 	include_once"../dao/DAO.php";
 	
-	$id = $_GET['id'];
+	$id = filter_var($_GET['id'], FILTER_SANITIZE_NUMBER_INT);
 	$jeuDao = new JeuDAO();
-	$id = $_GET['id'];
 	$jeu= $jeuDao->lireJeu($id);
 
 	?>

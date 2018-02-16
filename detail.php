@@ -1,7 +1,7 @@
 <?php
-	include"dao/DAO.php";
+	include_once"dao/DAO.php";
 	$jeuDao = new JeuDAO();
-	$id = $_GET['id'];
+	$id = filter_var($_GET['id'], FILTER_SANITIZE_NUMBER_INT);
 	$item = $jeuDao->lireJeu($id);
 	
 ?>

@@ -2,9 +2,15 @@
 	
 	if(!empty($_POST["ajouter"]))
 	{
-		include"../dao/DAO.php";
+		include_once"../dao/DAO.php";
 		$jeuDao = new JeuDAO();
-		$jeuDao->ajouter($_POST['nom'], $_POST['description']);
+		
+		$filtreJeux = array();
+		$filtreJeux['nom'] = FILTER_SANITIZE_STRING;
+		$filtreJeux['description'] = FILTER_SANITIZE_STRING;
+		$listeJeux = filter_var_array($_POST, $filtreJeux);
+		
+		$jeuDao->ajouter($listeJeux);
 		echo("<p>jeu ajouter</p>");
 	}
 ?>
