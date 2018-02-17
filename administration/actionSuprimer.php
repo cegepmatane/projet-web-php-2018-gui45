@@ -5,9 +5,7 @@
 		{
 			include_once"../dao/DAO.php";
 			
-			$filtreJeux = array();
-			$filtreJeux['id'] = FILTER_SANITIZE_NUMBER_INT;
-			$jeu = filter_var_array($_POST, $filtreJeux);
+			$jeu = filter_var($_POST['id'], FILTER_SANITIZE_NUMBER_INT);
 			$jeuDao = new JeuDAO();
 			$jeuDao->suprimer($jeu);
 			
