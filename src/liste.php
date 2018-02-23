@@ -11,7 +11,8 @@
 
 	</head>
 	<body>
-		<h1>Liste jeux</h1>
+		<h1>Projet Liste</h1>
+		<h2>liste de jeu</h2>
 		<div>
 			<div id="MMO">
 				<h2>MMO</h2>

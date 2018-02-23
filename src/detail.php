@@ -11,7 +11,8 @@
 		<title>detail</title>
 	</head>
 	<body>
-		<h1>page detail</h1>
+		<h1>Projet Liste</h1>
+		<h2>page detail</h2>
 		<p><?php print_r($item['description']) ?></p>
 		<a href="liste.php">retour</a>
 	</body>
