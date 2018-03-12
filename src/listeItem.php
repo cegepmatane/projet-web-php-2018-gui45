@@ -1,7 +1,7 @@
 <?php
 	include_once"dao/DAO.php";
 	$jeuDao = new JeuDAO();
-	$genres = $jeuDao->lireGenres();
+	$jeux = $jeuDao->lireGenre($_GET['id']);
 	//print_r($jeux);
 ?>
 <html lang="fr">
@@ -12,19 +12,18 @@
 	</head>
 	<body>
 		<h1>Projet Liste</h1>
-		<h2>liste de genres</h2>
+		<h2>liste de jeu</h2>
 		<div>
+			<h3><?=$_GET['nom']?></h3>
 			<?php
-			foreach($genres as $genre)
+			foreach($jeux as $jeu)
 			{
 				?>
-				<h3>
-				<a href="listeItem.php?id=<?=$genre['ID']?>&nom=<?=$genre['Nom']?>"><?=$genre['Nom']?></a>
-				</h3>
+				<a href="detail.php?id=<?=$jeu['ID']?>"><?=$jeu['Nom']?></a>
 				<?php
 			}?>
 		</div>
-		<a href="accueil.html">retour</a>
+		<a href="liste.php">retour</a>
 	</body>
 	<link rel="stylesheet" type="text/css" href="style.css">
 </html>

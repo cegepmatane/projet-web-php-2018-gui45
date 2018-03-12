@@ -11,6 +11,25 @@
 			
 			return $jeux;
 		}
+		function lireGenres()
+		{
+			global $basededonnees;
+			$requete = $basededonnees->prepare("SELECT * FROM genre");
+			$requete->execute();
+			$jeux = $requete->fetchAll();
+			
+			return $jeux;
+		}
+		function lireGenre($id)
+		{
+			global $basededonnees;
+			$requete = $basededonnees->prepare("SELECT * FROM jeuxVideo WHERE idGenre=:id");
+			$requete->bindParam(':id', $id, PDO::PARAM_INT);
+			$requete->execute();
+			$jeux = $requete->fetchAll();
+			
+			return $jeux;
+		}
 		function lireJeu($id)
 		{
 			global $basededonnees;
