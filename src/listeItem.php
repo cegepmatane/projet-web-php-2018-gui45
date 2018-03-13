@@ -1,7 +1,7 @@
 <?php
 	include_once"dao/DAO.php";
 	$jeuDao = new JeuDAO();
-	$jeux = $jeuDao->lireGenre($_GET['id']);
+	$jeux = $jeuDao->lireGenreJeu($_GET['id']);
 	//print_r($jeux);
 ?>
 <html lang="fr">

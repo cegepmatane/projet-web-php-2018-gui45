@@ -17,10 +17,7 @@
 				<label for="nom">nom</label>
 				<input type="text" name="nom" id="nom">
 			</div>
-			<div>
-				<label for="idGenre">idGenre</label>
-				<input type="number" name="idGenre" id="idGenre">
-			</div>
+			<input type="hidden" name="idGenre" id="idGenre" value=<?=$_GET['idGenre']?>>
 			<div>
 				<label for="description">description</label>
 				<textarea name="description" id="description"></textarea>
