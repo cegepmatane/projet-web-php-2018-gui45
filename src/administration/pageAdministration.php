@@ -11,11 +11,6 @@
 	
 	$jeudao = new JeuDAO();
 	$genres = $jeudao->lireGenres();
-	$jeux = array();
-	$jeux['1'] = $jeudao->lireGenre(1);
-	$jeux['2'] = $jeudao->lireGenre(2);
-	$jeux['3'] = $jeudao->lireGenre(3);
-	$jeux['4'] = $jeudao->lireGenre(4);
 ?>
 <!doctype html>
 <html lang="fr">

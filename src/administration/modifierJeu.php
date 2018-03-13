@@ -13,11 +13,11 @@
 </head>
 <body>
 	<header>
-		<h1>ajouter un jeu</h1>
+		<h1>Page administration</h1>
 	</header>
 	
 	<section id="sectionFormulaire">
-		<header><h2>ajout dun jeu</h2></header>
+		<header><h2>modifier un jeu</h2></header>
 		<form method="POST" action="pageAdministration.php">
 			<div>
 				<label for="nom">nom</label>

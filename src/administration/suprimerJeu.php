@@ -14,7 +14,7 @@
 </head>
 <body>
 	<header>
-		<h1>administration</h1>
+		<h1>Page administration</h1>
 		
 	</header>
 	

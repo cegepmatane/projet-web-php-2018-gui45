@@ -18,7 +18,7 @@
 	</header>
 	
 	<section id="formAjouter">
-		<header><h2>options d'administration</h2></header>
+		<header><h2>modifier un genre</h2></header>
 		<form method="POST" action="pageAdministration.php">
 			<div>
 				<label for="nomGenre">nom</label>

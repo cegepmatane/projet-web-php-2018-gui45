@@ -13,6 +13,7 @@
 	<body>
 		<h1>Projet Liste</h1>
 		<h2>page detail</h2>
+		<h3><?=$item['Nom']?></h3>
 		<p><?php print_r($item['description']) ?></p>
 		<a href="liste.php">retour</a>
 	</body>

@@ -61,6 +61,14 @@
 			$requete->bindParam(':idGenre', $jeux['idGenre'], PDO::PARAM_INT);
 			$requete->execute();
 		}
+		function ajouterGenre($genre)
+		{
+			global $basededonnees;
+			$SQL_AJOUTER_JEU = "INSERT INTO genre(nom) VALUES(:nom)";
+			$requete = $basededonnees->prepare($SQL_AJOUTER_JEU);
+			$requete->bindParam(':nom', $genre['nom'], PDO::PARAM_STR);
+			$requete->execute();
+		}
 		function suprimer($id)
 		{
 			global $basededonnees;
