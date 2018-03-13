@@ -14,18 +14,21 @@
 <body>
 	<header>
 		<h1>ajouter un jeu</h1>
-		
 	</header>
 	
 	<section id="sectionFormulaire">
 		<header><h2>ajout dun jeu</h2></header>
 		<form method="POST" action="pageAdministration.php">
 			<div>
-				<label for="nom"></label>
+				<label for="nom">nom</label>
 				<input type="text" name="nom" id="nom" value="<?=$jeu['Nom']?>">
 			</div>
 			<div>
-				<label for="description"></label>
+				<label for="idGenre">idGenre</label>
+				<input type="number" name="idGenre" id="idGenre" value="<?=$jeu['idGenre']?>">
+			</div>
+			<div>
+				<label for="description">description</label>
 				<textarea name="description" id="description" ><?=$jeu['description']?></textarea>
 			</div>
 			<input type="hidden" name="id" id="id" value="<?=$jeu['ID']?>">

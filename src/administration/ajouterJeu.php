@@ -14,11 +14,15 @@
 		<header><h2>ajout d'un jeu</h2></header>
 		<form method="post" action="pageAdministration.php">
 			<div>
-				<label for="nom"></label>
+				<label for="nom">nom</label>
 				<input type="text" name="nom" id="nom">
 			</div>
 			<div>
-				<label for="description"></label>
+				<label for="idGenre">idGenre</label>
+				<input type="number" name="idGenre" id="idGenre">
+			</div>
+			<div>
+				<label for="description">description</label>
 				<textarea name="description" id="description"></textarea>
 			</div>
 			<input type="hidden" value = "oui" name="ajouter">

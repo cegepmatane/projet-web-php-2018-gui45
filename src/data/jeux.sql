@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : localhost:3306
--- Généré le :  jeu. 08 fév. 2018 à 20:23
+-- Généré le :  mar. 13 mars 2018 à 08:46
 -- Version du serveur :  5.7.21
 -- Version de PHP :  7.1.13
 
@@ -52,24 +52,25 @@ INSERT INTO `genre` (`ID`, `Nom`) VALUES
 CREATE TABLE `jeuxvideo` (
   `ID` int(100) NOT NULL,
   `Nom` varchar(50) NOT NULL,
-  `description` varchar(1000) NOT NULL
+  `description` varchar(1000) NOT NULL,
+  `idGenre` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Déchargement des données de la table `jeuxvideo`
 --
 
-INSERT INTO `jeuxvideo` (`ID`, `Nom`, `description`) VALUES
-(1, 'Eve online', 'eve est un mmo rpg baser dans le futur'),
-(2, 'world of warcraft ', 'word of warcraft est un mmo rpg'),
-(3, 'Battlefield 1', 'battlefield 1 est un fps'),
-(4, 'the elder scrolls online', 'TESO est une mmo rpg dans l\'univer de elder scrolls'),
-(5, 'call of duty', 'cod est un fps'),
-(6, 'escape from tarkov', 'escape from tarkov est un fps'),
-(7, 'counter strike', 'un jeu fps competitif multijoueur'),
-(8, 'half life 2', 'un fps dont la trilogie ne ce conclura jamais'),
-(9, 'world of tanks', 'un jeu mmo / moba de tank'),
-(10, 'warthunder', 'une simulation mmo / moba de vehicule de guerre');
+INSERT INTO `jeuxvideo` (`ID`, `Nom`, `description`, `idGenre`) VALUES
+(1, 'Eve online', 'eve est un mmo rpg baser dans le futur ', 1),
+(2, 'world of warcraft ', 'word of warcraft est un mmo rpg', 1),
+(3, 'Battlefield 1', 'battlefield 1 est un fps de la ww1', 2),
+(4, 'the elder scrolls online', 'TESO est une mmo rpg dans l\'univer de elder scrolls', 1),
+(5, 'call of duty', 'cod est un fps', 2),
+(6, 'escape from tarkov', 'escape from tarkov est un fps hardcore de survie', 2),
+(7, 'counter strike', 'un jeu fps competitif multijoueur', 2),
+(8, 'half life 2', 'un fps dont la trilogie ne ce conclura jamais', 2),
+(9, 'world of tanks', 'un jeu mmo / moba de tank', 1),
+(10, 'warthunder', 'une simulation mmo / moba de vehicule de guerre', 1);
 
 --
 -- Index pour les tables déchargées
@@ -102,7 +103,7 @@ ALTER TABLE `genre`
 -- AUTO_INCREMENT pour la table `jeuxvideo`
 --
 ALTER TABLE `jeuxvideo`
-  MODIFY `ID` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `ID` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
