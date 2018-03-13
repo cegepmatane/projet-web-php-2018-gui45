@@ -37,7 +37,6 @@
 				<?php
 			}
 		?>
-		
 	</section>
 </body>
 </html>
