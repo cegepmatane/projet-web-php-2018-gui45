@@ -77,6 +77,14 @@
 			$requete->bindParam(':id', $id, PDO::PARAM_INT);
 			$requete->execute();
 		}
+		function suprimerGenre($id)
+		{
+			global $basededonnees;
+			$SQL_EFFACER_JEU = "DELETE FROM genre WHERE ID = :id";
+			$requete = $basededonnees->prepare($SQL_EFFACER_JEU);
+			$requete->bindParam(':id', $id, PDO::PARAM_INT);
+			$requete->execute();
+		}
 		function modifier($jeu)
 		{
 			global $basededonnees;
