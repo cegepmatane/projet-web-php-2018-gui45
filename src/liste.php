@@ -19,7 +19,7 @@
 			{
 				?>
 				<h3>
-				<a href="listeItem.php?id=<?=$genre['ID']?>&nom=<?=$genre['Nom']?>"><?=$genre['Nom']?></a>
+				<a href="listeItem.php?id=<?=$genre['ID']?>&nom=<?=$genre['Nom']?>&description=<?=$genre['description']?>"><?=$genre['Nom']?></a>
 				</h3>
 				<?php
 			}?>

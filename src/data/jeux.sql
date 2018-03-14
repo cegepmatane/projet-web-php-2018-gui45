@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : localhost:3306
--- Généré le :  mar. 13 mars 2018 à 08:46
+-- Généré le :  mar. 13 mars 2018 à 18:02
 -- Version du serveur :  5.7.21
 -- Version de PHP :  7.1.13
 
@@ -30,18 +30,19 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `genre` (
   `ID` int(11) NOT NULL,
-  `Nom` varchar(50) NOT NULL
+  `Nom` varchar(50) NOT NULL,
+  `description` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Déchargement des données de la table `genre`
 --
 
-INSERT INTO `genre` (`ID`, `Nom`) VALUES
-(1, 'MMO'),
-(2, 'FPS'),
-(3, 'MOBA'),
-(4, 'RPG');
+INSERT INTO `genre` (`ID`, `Nom`, `description`) VALUES
+(1, 'MMO', 'Massive multiplayer online'),
+(2, 'FPS', 'First person shooter'),
+(3, 'MOBA', 'Multiplayer online battle arena'),
+(4, 'RPG', 'Role playing game');
 
 -- --------------------------------------------------------
 
@@ -66,11 +67,14 @@ INSERT INTO `jeuxvideo` (`ID`, `Nom`, `description`, `idGenre`) VALUES
 (3, 'Battlefield 1', 'battlefield 1 est un fps de la ww1', 2),
 (4, 'the elder scrolls online', 'TESO est une mmo rpg dans l\'univer de elder scrolls', 1),
 (5, 'call of duty', 'cod est un fps', 2),
-(6, 'escape from tarkov', 'escape from tarkov est un fps hardcore de survie', 2),
 (7, 'counter strike', 'un jeu fps competitif multijoueur', 2),
 (8, 'half life 2', 'un fps dont la trilogie ne ce conclura jamais', 2),
 (9, 'world of tanks', 'un jeu mmo / moba de tank', 1),
-(10, 'warthunder', 'une simulation mmo / moba de vehicule de guerre', 1);
+(10, 'warthunder', 'une simulation mmo / moba de vehicule de guerre', 1),
+(15, 'League of Legends', 'un moba', 3),
+(16, 'Skyrim', 'un RPG', 4),
+(17, 'Fallout 4', 'un rpg', 4),
+(18, 'Dota', 'un moba', 3);
 
 --
 -- Index pour les tables déchargées
@@ -97,13 +101,13 @@ ALTER TABLE `jeuxvideo`
 -- AUTO_INCREMENT pour la table `genre`
 --
 ALTER TABLE `genre`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT pour la table `jeuxvideo`
 --
 ALTER TABLE `jeuxvideo`
-  MODIFY `ID` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `ID` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

@@ -24,6 +24,10 @@
 				<label for="nomGenre">nom</label>
 				<input type="text" name="nomGenre" id="nom" value="<?=$genre['Nom']?>">
 			</div>
+			<div>
+				<label for="description">description</label>
+				<input type="text" name="description" id="description" value="<?=$genre['description']?>">
+			</div>
 			<input type="hidden" name="idGenre" id="id" value="<?=$genre['ID']?>">
 			<input type="submit" value="valider">
 		</form>

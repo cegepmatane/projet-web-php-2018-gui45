@@ -7,6 +7,7 @@
 		
 		$filtreGenres = array();
 		$filtreGenres['nom'] = FILTER_SANITIZE_STRING;
+		$filtreGenres['description'] = FILTER_SANITIZE_STRING;
 		$listeGenre = filter_var_array($_POST, $filtreGenres);
 		
 		$jeuDao->ajouterGenre($listeGenre);

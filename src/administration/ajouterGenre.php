@@ -16,6 +16,10 @@
 				<label for="nom">nom</label>
 				<input type="text" name="nom" id="nom">
 			</div>
+			<div>
+				<label for="description">description</label>
+				<input type="text" name="description" id="description">
+			</div>
 			<input type="hidden" value = "oui" name="ajouterGenre">
 			<input type="submit" value="valider">
 		</form

@@ -64,9 +64,10 @@
 		function ajouterGenre($genre)
 		{
 			global $basededonnees;
-			$SQL_AJOUTER_JEU = "INSERT INTO genre(nom) VALUES(:nom)";
+			$SQL_AJOUTER_JEU = "INSERT INTO genre(nom, description) VALUES(:nom, :description)";
 			$requete = $basededonnees->prepare($SQL_AJOUTER_JEU);
 			$requete->bindParam(':nom', $genre['nom'], PDO::PARAM_STR);
+			$requete->bindParam(':description', $genre['description'], PDO::PARAM_STR);
 			$requete->execute();
 		}
 		function suprimer($id)
@@ -101,9 +102,10 @@
 			echo("allo");
 			global $basededonnees;
 			//$SQL_MODIFIER_JEU = "UPDATE genre SET Nom = '".$genre['nomGenre']."' WHERE genre.ID = '".$genre['idGenre']."';";
-			$SQL_MODIFIER_JEU = "UPDATE genre SET Nom = :nom WHERE genre.ID = :id;";
+			$SQL_MODIFIER_JEU = "UPDATE genre SET Nom = :nom, description = :description WHERE genre.ID = :id;";
 			$requete = $basededonnees->prepare($SQL_MODIFIER_JEU);
 			$requete->bindParam(':nom', $genre['nomGenre'], PDO::PARAM_STR);
+			$requete->bindParam(':description', $genre['description'], PDO::PARAM_STR);
 			$requete->bindParam(':id', $genre['idGenre'], PDO::PARAM_INT);
 			$requete->execute();
 		}

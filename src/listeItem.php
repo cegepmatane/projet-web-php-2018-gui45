@@ -15,6 +15,7 @@
 		<h2>liste de jeu</h2>
 		<div>
 			<h3><?=$_GET['nom']?></h3>
+			<p><?=$_GET['description']?></p>
 			<?php
 			foreach($jeux as $jeu)
 			{
