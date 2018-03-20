@@ -1,14 +1,14 @@
 <?php
 	include_once"../dao/DAO.php";
 	
-	include"baseDeDonner.php";
-	include"actionModifierJeu.php";
-	include"actionSuprimerJeu.php";
-	include"actionAjouterJeu.php";
-	include"actionModifierGenre.php";
-	include"actionSuprimerGenre.php";
-	include"actionAjouterGenre.php";
-	
+	include "baseDeDonner.php";
+	include "actionModifierJeu.php";
+	include "actionSuprimerJeu.php";
+	include "actionAjouterJeu.php";
+	include "actionModifierGenre.php";
+	include "actionSuprimerGenre.php";
+	include "actionAjouterGenre.php";
+	include "traiterImage.php";
 	$jeudao = new JeuDAO();
 	$genres = $jeudao->lireGenres();
 ?>
@@ -24,7 +24,7 @@
 		
 	</header>
 	
-	<section id="formAjouter">
+	<section>
 		<header><h2>options d'administration</h2></header>
 		<h3><a href="ajouterGenre.php">ajouter un genre</a></h3>
 		<?php
@@ -33,13 +33,14 @@
 				//echo($jeu);
 				?>
 				<h3>
-				<?=$genre['Nom']?>
-				<a href="suprimerGenre.php?id=<?=$genre['ID']?>">suprimer</a>
-				<a href="modifierGenre.php?id=<?=$genre['ID']?>">modifier</a>
+					<?=$genre['Nom']?>
+					<a href="suprimerGenre.php?id=<?=$genre['ID']?>">suprimer</a>
+					<a href="modifierGenre.php?id=<?=$genre['ID']?>">modifier</a>
 				</h3>
 				<?php
 			}
 		?>
 	</section>
+
 </body>
 </html>

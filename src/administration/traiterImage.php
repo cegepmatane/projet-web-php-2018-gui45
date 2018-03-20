@@ -1,11 +1,16 @@
 <?php 
-	$repertoire = "../illustration/";
-	$source = $_FILES['illustration']['tmp_name'];
-	$destination = $repertoire.$_FILES['illustration']['name'];
-	//print_r($_FILES['illustration']['name']);
-	If(move_uploaded_file($source, $destination)){
-	?>
-	<img src="../illustration/<?php echo($_FILES['illustration']['name']) ?>">
-	<?php
+if(!empty($_FILES['illustration']))
+	{
+		$repertoire = "../illustration/";
+		$source = $_FILES['illustration']['tmp_name'];
+		$destination = $repertoire.$_FILES['illustration']['name'];
+		echo( "destination : " .$destination);
+		echo( "source : " .$source);
+		//print_r($_FILES['illustration']['name']);
+		if(move_uploaded_file($source, $destination)){
+			?>
+			<img src="../illustration/<?=$_FILES['illustration']['name']?>">
+			<?php
+		}
 	}
 ?>

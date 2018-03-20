@@ -2,6 +2,15 @@
 	include_once "baseDeDonner.php";
 	class JeuDAO
 	{
+		function ajouterImage($image, $id)
+		{
+			global $basededonnees;
+			$SQL_AJOUTER_JEU = "UPDATE jeuxvideo SET image=:image WHERE jeuxvideo.ID = :id;";
+			$requete = $basededonnees->prepare($SQL_AJOUTER_JEU);
+			$requete->bindParam(':image', $image, PDO::PARAM_STR);
+			$requete->bindParam(':id', $id, PDO::PARAM_LOB);
+			$requete->execute();
+		}
 		function lireListe()
 		{
 			global $basededonnees;
