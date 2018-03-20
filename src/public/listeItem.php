@@ -8,7 +8,6 @@
 	<head>
 		<meta charset="utf-8">
 		<title>liste jeux</title>
-
 	</head>
 	<body>
 		<h1>Projet Liste</h1>
