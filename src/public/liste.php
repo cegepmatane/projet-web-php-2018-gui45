@@ -1,5 +1,5 @@
 <?php
-	include_once"dao/DAO.php";
+	include_once"../dao/DAO.php";
 	$jeuDao = new JeuDAO();
 	$genres = $jeuDao->lireGenres();
 	//print_r($jeux);
@@ -24,7 +24,7 @@
 				<?php
 			}?>
 		</div>
-		<a href="accueil.html">retour</a>
+		<a href="../accueil.html">retour</a>
 	</body>
 	<link rel="stylesheet" type="text/css" href="style.css">
 </html>
