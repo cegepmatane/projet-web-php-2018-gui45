@@ -23,11 +23,20 @@
 			$destination = $repertoire.$_FILES['illustration']['name'];
 			//echo( "destination : " .$destination);
 			//echo( "source : " .$source);
-			//print_r($_FILES['illustration']['name']);
+			$image = $repertoire . $_FILES['illustration']['name'];
+			//print_r($image);
+			
 			if(move_uploaded_file($source, $destination)){
+				$copy = imagecreatefrompng($image);
+				list($width, $height) = getimagesize($image);
+				//var_dump($copy);
+				$miniature = imagecreatetruecolor($width/2, $height/2);
+				imageCopyResized($miniature, $copy, 0,0,0,0,$width/2,$height/2,$width,$height);
+				//var_dump($miniature);
+				$miniatureImage = $repertoire."miniature".$_FILES['illustration']['name'];
+				imagepng($miniature, $miniatureImage);
 				
-				$jeuDao->ajouterImage($repertoire . $_FILES['illustration']['name'], $_POST['id']);
-				
+				$jeuDao->ajouterImage($miniatureImage, $_POST['id']);
 			}
 		}
 	}
