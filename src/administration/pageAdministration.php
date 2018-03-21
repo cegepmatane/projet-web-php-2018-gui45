@@ -8,7 +8,6 @@
 	include "actionModifierGenre.php";
 	include "actionSuprimerGenre.php";
 	include "actionAjouterGenre.php";
-	include "traiterImage.php";
 	$jeudao = new JeuDAO();
 	$genres = $jeudao->lireGenres();
 ?>
