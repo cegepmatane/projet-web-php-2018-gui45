@@ -35,7 +35,7 @@
 				//var_dump($miniature);
 				$miniatureImage = $repertoire."miniature".$_FILES['illustration']['name'];
 				imagepng($miniature, $miniatureImage);
-				
+				unlink($image);//supression de fichier inutile
 				$jeuDao->ajouterImage($miniatureImage, $_POST['id']);
 			}
 		}
