@@ -1,19 +1,16 @@
 <?php
   include_once"../dao/DAO.php";
-
+  session_start();
   $jeuDao = new JeuDAO();
 
   $filtreValeurs = array();
-  $filtreValeurs['prenom'] = FILTER_SANITIZE_STRING;
-  $filtreValeurs['nom'] = FILTER_SANITIZE_STRING;
-  $filtreValeurs['couriel'] = FILTER_SANITIZE_STRING;
-  $filtreValeurs['telephone'] = FILTER_SANITIZE_STRING;
-  $filtreValeurs['adresse'] = FILTER_SANITIZE_STRING;
-  $filtreValeurs['motDePasse'] = FILTER_SANITIZE_STRING;
-  $filtreValeurs['sexe'] = FILTER_SANITIZE_STRING;
+  $filtreValeurs['motDePasse'] = FILTER_SANITIZE_ENCODED;
+  $filtreValeurs['sexe'] = FILTER_SANITIZE_ENCODED;
   $listeValeurs = filter_var_array($_POST, $filtreValeurs);
   //var_dump($listeValeurs);
-  $jeuDao->ajouterMembre($listeValeurs);
+  $_SESSION['membre'] = array_merge($_SESSION['membre'], $listeValeurs);
+  print_r($_SESSION['membre']);
+  $jeuDao->ajouterMembre($_SESSION['membre']);
 ?>
 <html lang="fr">
 <head>

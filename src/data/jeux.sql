@@ -91,7 +91,6 @@ CREATE TABLE `membre` (
   `adresse` varchar(100) NOT NULL,
   `motDePasse` varchar(200) NOT NULL,
   `sexe` text NOT NULL,
-  `admin` tinyint(1) NOT NULL DEFAULT '0',
   `id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
@@ -99,9 +98,9 @@ CREATE TABLE `membre` (
 -- Déchargement des données de la table `membre`
 --
 
-INSERT INTO `membre` (`prenom`, `nom`, `couriel`, `telephone`, `adresse`, `motDePasse`, `sexe`, `admin`, `id`) VALUES
-('guillaume', 'desjardins marceau', 'guillaume.d.marceau@gmail.com', '418-556', 'une addresse', 'admin1', 'homme', 1, 1),
-('nadine', 'nadine', 'nadine@nadine.com', 'nadine', 'nadine', 'nadine', 'femme', 1, 2);
+INSERT INTO `membre` (`prenom`, `nom`, `couriel`, `telephone`, `adresse`, `motDePasse`, `sexe`, `id`) VALUES
+('guillaume', 'desjardins marceau', 'guillaume.d.marceau@gmail.com', '418-556', 'une addresse', 'admin1', 'homme', 1),
+('nadine', 'nadine', 'nadine@nadine.com', 'nadine', 'nadine', 'nadine', 'femme', 2);
 
 --
 -- Index pour les tables déchargées

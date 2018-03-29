@@ -1,3 +1,13 @@
+<?php
+session_start();
+$filtreValeurs = array();
+$filtreValeurs['prenom'] = FILTER_SANITIZE_ENCODED;
+$filtreValeurs['nom'] = FILTER_SANITIZE_ENCODED;
+$filtreValeurs['couriel'] = FILTER_SANITIZE_ENCODED;
+$filtreValeurs['telephone'] = FILTER_SANITIZE_ENCODED;
+$filtreValeurs['adresse'] = FILTER_SANITIZE_ENCODED;
+$_SESSION['membre'] = filter_var_array($_POST, $filtreValeurs);
+?>
 <!doctype html>
 <html lang="fr">
 <head>
@@ -22,13 +32,6 @@
         <label for="autre">autre</label>
         <input type="radio" name="sexe" id="autre" value="autre">
   		</div>
-      <div>
-        <input type="hidden" name="prenom" value="<?=$_POST['prenom']?>">
-        <input type="hidden" name="nom" value="<?=$_POST['nom']?>">
-        <input type="hidden" name="couriel" value="<?=$_POST['couriel']?>">
-        <input type="hidden" name="telephone" value="<?=$_POST['telephone']?>">
-        <input type="hidden" name="adresse" value="<?=$_POST['adresse']?>">
-      </div>
   			<input type="submit" value="soumettre">
     </form>
 	</section>
