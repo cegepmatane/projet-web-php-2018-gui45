@@ -132,5 +132,23 @@
 			$requete->bindParam(':sexe', $membre['sexe'], PDO::PARAM_STR);
 			$requete->execute();
 		}
+		function trouverMembre($membre)
+		{
+			global $basededonnees;
+			$SQL_TROUVER_MEMBRE = "SELECT * FROM membre WHERE prenom = :prenom";
+			$requete = $basededonnees->prepare($SQL_TROUVER_MEMBRE);
+			$requete->bindParam(':prenom', $membre['prenom'], PDO::PARAM_STR);
+			$requete->execute();
+			$membreTrouve =$requete->fetch();
+			if(strcmp($membre["motDePasse"],$membreTrouve["motDePasse"]) == 0)
+			{
+				session_start();
+				$_SESSION['membre'] = $membreTrouve;
+				print_r($_SESSION['membre']);
+			}
+			else {
+				echo("erreur avec le mot de passe ou le prenom");
+			}
+		}
 	}
 ?>

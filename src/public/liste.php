@@ -1,8 +1,13 @@
 <?php
+session_start();
 	include_once"../dao/DAO.php";
 	$jeuDao = new JeuDAO();
 	$genres = $jeuDao->lireGenres();
+	print_r($_SESSION['membre']);
+	if(!empty($_SESSION["membre"]))
+			echo( $_SESSION["membre"]["prenom"]. "est connexter");
 	//print_r($jeux);
+
 ?>
 <html lang="fr">
 	<head>
