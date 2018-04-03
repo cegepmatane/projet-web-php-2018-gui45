@@ -35,6 +35,6 @@ $_SESSION['membre'] = filter_var_array($_POST, $filtreValeurs);
   			<input type="submit" value="soumettre">
     </form>
 	</section>
-	<a href="../accueil.html">retour</a>
+	<a href="../accueil.php">retour</a>
 </body>
 </html>

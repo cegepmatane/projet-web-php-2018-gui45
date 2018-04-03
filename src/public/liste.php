@@ -1,11 +1,8 @@
 <?php
-session_start();
-	include_once"../dao/DAO.php";
+	include_once "connecter.php";
+	include_once "../dao/DAO.php";
 	$jeuDao = new JeuDAO();
 	$genres = $jeuDao->lireGenres();
-	print_r($_SESSION['membre']);
-	if(!empty($_SESSION["membre"]))
-			echo( $_SESSION["membre"]["prenom"]. "est connexter");
 	//print_r($jeux);
 
 ?>
@@ -28,7 +25,7 @@ session_start();
 				<?php
 			}?>
 		</div>
-		<a href="../accueil.html">retour</a>
+		<a href="../accueil.php">retour</a>
 	</body>
 	<link rel="stylesheet" type="text/css" href="style.css">
 </html>

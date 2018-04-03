@@ -9,7 +9,7 @@
   $listeValeurs = filter_var_array($_POST, $filtreValeurs);
   //var_dump($listeValeurs);
   $_SESSION['membre'] = array_merge($_SESSION['membre'], $listeValeurs);
-  print_r($_SESSION['membre']);
+  //print_r($_SESSION['membre']);
   $jeuDao->ajouterMembre($_SESSION['membre']);
 ?>
 <html lang="fr">
@@ -23,7 +23,7 @@
 		<h2>Inscription</h2>
 	  <p>Inscription terminer avec succes</p>
     <div>
-      <a href="../accueil.html">retourner a l'accueil</a>
+      <a href="../accueil.php">retourner a l'accueil</a>
     </div>
 	</section>
 

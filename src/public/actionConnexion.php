@@ -6,7 +6,7 @@
   $filtreValeurs['prenom'] = FILTER_SANITIZE_ENCODED;
   $listeValeurs = filter_var_array($_POST, $filtreValeurs);
   $jeuDao->trouverMembre($listeValeurs);
-  print_r($_SESSION['membre']);
+//  print_r($_SESSION['membre']);
 ?>
 <html lang="fr">
 <head>
@@ -19,7 +19,7 @@
 		<h2>connexion</h2>
 	  <p>connexion terminer</p>
     <div>
-      <a href="../accueil.html">retourner a l'accueil</a>
+      <a href="../accueil.php">retourner a l'accueil</a>
     </div>
 	</section>
 

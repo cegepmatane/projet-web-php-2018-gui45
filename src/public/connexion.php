@@ -20,6 +20,6 @@
   			<input type="submit" value="soumettre">
     </form>
 	</section>
-	<a href="../accueil.html">retour</a>
+	<a href="../accueil.php">retour</a>
 </body>
 </html>

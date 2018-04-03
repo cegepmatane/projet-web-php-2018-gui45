@@ -1,5 +1,6 @@
 <?php
-	include_once"../dao/DAO.php";
+	include_once "../dao/DAO.php";
+	include_once "connecter.php";
 	$jeuDao = new JeuDAO();
 	$jeux = $jeuDao->lireGenreJeu($_GET['id']);
 	//print_r($jeux);

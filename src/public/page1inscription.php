@@ -32,6 +32,6 @@
 			<input type="submit" value="suivant">
     </form>
 	</section>
-	<a href="../accueil.html">retour</a>
+	<a href="../accueil.php">retour</a>
 </body>
 </html>
