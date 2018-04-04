@@ -144,7 +144,7 @@
 			{
 				session_start();
 				$_SESSION['membre'] = $membreTrouve;
-				print_r($_SESSION['membre']);
+				//print_r($_SESSION['membre']);
 			}
 			else {
 				echo("erreur avec le mot de passe ou le prenom");
