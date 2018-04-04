@@ -1,6 +1,7 @@
 <?php
-	include_once"../dao/DAO.php";
-	
+	include_once "connecterAdmin.php";
+	include_once "../dao/DAO.php";
+
 	include "baseDeDonner.php";
 	include "actionModifierJeu.php";
 	include "actionSuprimerJeu.php";
@@ -20,9 +21,9 @@
 <body>
 	<header>
 		<h1>Page administration</h1>
-		
+
 	</header>
-	
+
 	<section>
 		<header><h2>options d'administration</h2></header>
 		<h3><a href="ajouterGenre.php">ajouter un genre</a></h3>

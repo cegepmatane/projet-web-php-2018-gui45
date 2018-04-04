@@ -1,9 +1,10 @@
 <?php
-	include_once"../dao/DAO.php";
+	include_once "connecterAdmin.php";
+	include_once "../dao/DAO.php";
 	$jeuDao = new JeuDAO();
 	$id = filter_var($_GET['id'], FILTER_SANITIZE_NUMBER_INT);
 	$jeu = $jeuDao->lireJeu($id);
-	
+
 	?>
 <!doctype html>
 <html lang="fr">
@@ -15,7 +16,7 @@
 	<header>
 		<h1>Page administration</h1>
 	</header>
-	
+
 	<section id="sectionFormulaire">
 		<header><h2>modifier un jeu</h2></header>
 		<form method="POST" action="pageAdministration.php" enctype="multipart/form-data">
@@ -35,7 +36,7 @@
 				<label for="illustration">modifier illustration</label>
 				<input type="file" name="illustration">
 			</div>
-			
+
 			<input type="hidden" name="id" id="id" value="<?=$jeu['ID']?>">
 			<input type="hidden" value = "oui" name="modifier">
 			<input type="submit" value="valider">

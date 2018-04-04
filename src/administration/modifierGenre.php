@@ -1,5 +1,6 @@
 <?php
-	include_once"../dao/DAO.php";
+	include_once "connecterAdmin.php";
+	include_once "../dao/DAO.php";
 	$jeuDAO = new JeuDAO();
 	$genre = $jeuDAO->LireGenre($_GET['id']);
 	$jeux = $jeuDAO->lireGenreJeu($_GET['id']);
@@ -14,9 +15,9 @@
 <body>
 	<header>
 		<h1>Page administration</h1>
-		
+
 	</header>
-	
+
 	<section id="formAjouter">
 		<header><h2>modifier un genre</h2></header>
 		<form method="POST" action="pageAdministration.php">

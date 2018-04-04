@@ -1,19 +1,20 @@
 <?php
+	include_once "connecterAdmin.php";
 	if(!empty($_POST["modifier"]))
 	{
-		include_once"../dao/DAO.php";
-		
+		include_once "../dao/DAO.php";
+
 		$jeuDao = new JeuDAO();
-		
+
 		$filtreJeux = array();
 		$filtreJeux['nom'] = FILTER_SANITIZE_STRING;
 		$filtreJeux['description'] = FILTER_SANITIZE_STRING;
 		$filtreJeux['id'] = FILTER_SANITIZE_NUMBER_INT;
 		$filtreJeux['idGenre'] = FILTER_SANITIZE_NUMBER_INT;
 		$listeJeux = filter_var_array($_POST, $filtreJeux);
-		
+
 		$jeuDao->modifier($listeJeux);
-		
+
 		echo("<p>modifications appiquer</p>");
 		//var_dump($_FILES['illustration']);
 		if(!empty($_FILES['illustration']))
@@ -25,7 +26,7 @@
 			//echo( "source : " .$source);
 			$image = $repertoire . $_FILES['illustration']['name'];
 			//print_r($image);
-			
+
 			if(move_uploaded_file($source, $destination)){
 				$copy = imagecreatefrompng($image);
 				list($width, $height) = getimagesize($image);

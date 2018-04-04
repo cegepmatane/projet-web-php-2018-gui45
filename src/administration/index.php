@@ -1,3 +1,3 @@
 <?php
-	include_once"pageAdministration.php";
+	include_once "pageAdministration.php";
 ?>
