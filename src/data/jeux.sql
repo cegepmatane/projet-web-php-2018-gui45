@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : localhost:3306
--- Généré le :  ven. 23 mars 2018 à 06:28
+-- Généré le :  jeu. 05 avr. 2018 à 15:12
 -- Version du serveur :  5.7.21
 -- Version de PHP :  7.1.13
 
@@ -63,7 +63,7 @@ CREATE TABLE `jeuxvideo` (
 --
 
 INSERT INTO `jeuxvideo` (`ID`, `Nom`, `description`, `idGenre`, `image`) VALUES
-(1, 'Eve online', 'eve est un mmo rpg baser dans le futur ', 1, '../illustration/blue.png'),
+(1, 'Eve online', 'eve est un mmo rpg baser dans le futur et dans l&#39;espace ', 1, '../illustration/blue.png'),
 (2, 'world of warcraft ', 'word of warcraft est un mmo rpg', 1, ''),
 (3, 'Battlefield 1', 'battlefield 1 est un fps de la ww1', 2, ''),
 (4, 'the elder scrolls online', 'TESO est une mmo rpg dans l\'univer de elder scrolls', 1, ''),
@@ -91,16 +91,18 @@ CREATE TABLE `membre` (
   `adresse` varchar(100) NOT NULL,
   `motDePasse` varchar(200) NOT NULL,
   `sexe` text NOT NULL,
-  `id` int(11) NOT NULL
+  `id` int(11) NOT NULL,
+  `admin` tinyint(1) NOT NULL DEFAULT '0'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Déchargement des données de la table `membre`
 --
 
-INSERT INTO `membre` (`prenom`, `nom`, `couriel`, `telephone`, `adresse`, `motDePasse`, `sexe`, `id`) VALUES
-('guillaume', 'desjardins marceau', 'guillaume.d.marceau@gmail.com', '418-556', 'une addresse', 'admin1', 'homme', 1),
-('nadine', 'nadine', 'nadine@nadine.com', 'nadine', 'nadine', 'nadine', 'femme', 2);
+INSERT INTO `membre` (`prenom`, `nom`, `couriel`, `telephone`, `adresse`, `motDePasse`, `sexe`, `id`, `admin`) VALUES
+('guillaume', 'desjardins marceau', 'guillaume.d.marceau@gmail.com', '418-556', 'une addresse', 'admin1', 'homme', 1, 1),
+('nadine', 'nadine', 'nadine@nadine.com', 'nadine', 'nadine', 'nadine', 'femme', 2, 1),
+('test', 'test', 'test@test.com', '444', 'test', 'test', 'test', 3, 0);
 
 --
 -- Index pour les tables déchargées
@@ -145,7 +147,7 @@ ALTER TABLE `jeuxvideo`
 -- AUTO_INCREMENT pour la table `membre`
 --
 ALTER TABLE `membre`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

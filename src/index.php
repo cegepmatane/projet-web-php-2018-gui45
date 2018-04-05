@@ -1,3 +1,3 @@
 <?php
-	include_once"accueil.html";
+	include_once "accueil.php";
 ?>
