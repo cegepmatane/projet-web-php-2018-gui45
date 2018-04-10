@@ -1,4 +1,6 @@
-
+ <?php
+	include_once "connecterAdmin.php";
+  ?>
 <html lang="fr">
 <head>
 	<meta charset="utf-8">
@@ -7,9 +9,9 @@
 <body>
 	<header>
 		<h1>Page administration</h1>
-		
+
 	</header>
-	
+
 	<section id="formAjouter">
 		<header><h2>ajouter un jeu</h2></header>
 		<form method="post" action="pageAdministration.php">
