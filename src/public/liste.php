@@ -10,9 +10,13 @@
 	<head>
 		<link type="text/JavaScript" href="../../lib/Ajax.js">
 		<script>
-			function afficher()
+		var precedent = null;
+			function afficher(genre)
 			{
-
+				//console.log(genre);
+				//genre.innerHTML = "allo"
+				if(null != precedent)precedent.innerHTML = "";
+				precedent = genre;
 			}
 		</script>
 		<meta charset="utf-8">
@@ -26,7 +30,7 @@
 			foreach($genres as $genre)
 			{
 				?>
-				<h3><?=$genre['Nom']?></h3>
+				<h3 onclick="afficher(<?=$genre['Nom']?>)"><?=$genre['Nom']?></h3>
 				<div id="<?=$genre['Nom']?>"></div>
 				<?php
 			}?>
