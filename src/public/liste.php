@@ -8,6 +8,13 @@
 ?>
 <html lang="fr">
 	<head>
+		<link type="text/JavaScript" href="../../lib/Ajax.js">
+		<script>
+			function afficher()
+			{
+
+			}
+		</script>
 		<meta charset="utf-8">
 		<title>liste jeux</title>
 	</head>
@@ -19,9 +26,8 @@
 			foreach($genres as $genre)
 			{
 				?>
-				<h3>
-				<a href="listeItem.php?id=<?=$genre['ID']?>&nom=<?=$genre['Nom']?>&description=<?=$genre['description']?>"><?=$genre['Nom']?></a>
-				</h3>
+				<h3><?=$genre['Nom']?></h3>
+				<div id="<?=$genre['Nom']?>"></div>
 				<?php
 			}?>
 		</div>
