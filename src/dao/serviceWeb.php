@@ -13,10 +13,10 @@
       <?php
         $listeJeux = $dao->lireGenreJeu($genre['ID']);
         foreach ($listeJeux as $jeu) { ?>
-          <<?=substr($jeu['Nom'], 0, 3)?>>
+          <jeu>
             <nom><?=$jeu['Nom']?></nom>
             <id><?=$jeu['ID']?></id>
-          </<?=substr($jeu['Nom'], 0, 3)?>>
+          </jeu>
         <?php }?>
     </<?=$genre['Nom']?>>
   <?php } ?>
