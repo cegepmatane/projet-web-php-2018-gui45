@@ -29,4 +29,5 @@
 		<a href="../accueil.php">retour</a>
 	</body>
 	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" type="text/css" href="styleListe.css">
 </html>
