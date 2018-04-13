@@ -5,8 +5,8 @@
 
 	if(!empty($_POST['recherche'])){
 		//print_r($_POST);
-		$item = $_POST['recherche'];
-		$jeux = $dao->rechercherListe($item);
+		$recherche = filter_var($_POST['recherche'], FILTER_SANITIZE_STRING);
+		$jeux = $dao->rechercherListe($recherche);
 		//print_r($liste[0]['Nom']);
 	}
 	else {
