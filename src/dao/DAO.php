@@ -20,6 +20,15 @@
 
 			return $jeux;
 		}
+		function rechercherListe($nom)
+		{
+			global $basededonnees;
+			$requete = $basededonnees->prepare("SELECT * FROM jeuxVideo");
+			$requete->execute();
+			$jeux = $requete->fetchAll();
+
+			return $jeux;
+		}
 		function lireGenres()
 		{
 			global $basededonnees;

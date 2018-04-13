@@ -1,14 +1,22 @@
 <?php
-	include_once "connecter.php";
+	include_once "public/connecter.php";
 	include_once "dao/DAO.php";
 	$dao = new JeuDao();
-	$liste = $dao->lireListe();
+
+	if(!empty $_POST['recherche']){
+		//print_r($_POST);
+		$item = $_POST['recherche'];
+		$liste = $dao->rechercherListe($item);
+	}
+	else {
+		$liste = $dao->lireListe();
+	}
 ?>
 <!doctype html>
 <html lang="fr">
 <head>
 	<meta charset="utf-8">
-	<title></title>
+	<title>accueil</title>
 </head>
 	<body>
 		<h1>Projet Liste</h1>
@@ -22,7 +30,7 @@
 		<div>
 			<form method="post" action="" id="formulaire-recherche">
 				<input type="text" name="recherche" id="recherche">
-				<input type="submit" value="soumetre">
+				<input type="submit" value="soumetre" name="action-recherche">
 			</form>
 		</div>
 	</body>
