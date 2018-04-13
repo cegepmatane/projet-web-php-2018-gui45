@@ -6,11 +6,11 @@
 	if(!empty($_POST['recherche'])){
 		//print_r($_POST);
 		$item = $_POST['recherche'];
-		$liste = $dao->rechercherListe($item);
-		print_r($liste[0]['Nom']);
+		$jeux = $dao->rechercherListe($item);
+		//print_r($liste[0]['Nom']);
 	}
 	else {
-		$liste = $dao->lireListe();
+		$jeux= $dao->lireListe();
 	}
 ?>
 <!doctype html>
@@ -34,5 +34,10 @@
 				<input type="submit" value="rechercher" name="action-recherche">
 			</form>
 		</div>
+		<?php foreach($jeux as $jeu){ ?>
+		<div>
+				<a href="detail.php?id=<?=$jeu['ID']?>"><?=$jeu['Nom']?></a>
+		</div>
+	<?php } ?>
 	</body>
 </html>
