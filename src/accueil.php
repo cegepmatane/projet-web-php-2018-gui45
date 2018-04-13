@@ -16,6 +16,12 @@
 <!doctype html>
 <html lang="fr">
 <head>
+	<script type="text/javascript" src="lib/Ajax.js"></script>
+	<script>
+	function rechercher(){
+		console.log("keyup");
+	}
+	</script>
 	<meta charset="utf-8">
 	<title>accueil</title>
 </head>
@@ -30,7 +36,7 @@
 		<a href="public/connexion.php">se connecter</a>
 		<div>
 			<form method="post" action="" id="formulaire-recherche">
-				<input type="text" name="recherche" id="recherche" value="<?=$_POST['recherche']?>">
+				<input type="text" name="recherche" id="recherche" onkeyup="rechercher()" value="<?=$_POST['recherche']?>">
 				<input type="submit" value="rechercher" name="action-recherche">
 			</form>
 		</div>
