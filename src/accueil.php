@@ -30,7 +30,7 @@
 		<a href="public/connexion.php">se connecter</a>
 		<div>
 			<form method="post" action="" id="formulaire-recherche">
-				<input type="text" name="recherche" id="recherche">
+				<input type="text" name="recherche" id="recherche" value="<?=$_POST['recherche']?>">
 				<input type="submit" value="rechercher" name="action-recherche">
 			</form>
 		</div>
