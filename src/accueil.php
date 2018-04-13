@@ -1,5 +1,8 @@
 <?php
 	include_once "connecter.php";
+	include_once "dao/DAO.php";
+	$dao = new JeuDao();
+	$liste = $dao->lireListe();
 ?>
 <!doctype html>
 <html lang="fr">
@@ -16,5 +19,11 @@
 		</div>
 		<a href="public/page1inscription.php">s'inscrire</a>
 		<a href="public/connexion.php">se connecter</a>
+		<div>
+			<form method="post" action="" id="formulaire-recherche">
+				<input type="text" name="recherche" id="recherche">
+				<input type="submit" value="soumetre">
+			</form>
+		</div>
 	</body>
 </html>
