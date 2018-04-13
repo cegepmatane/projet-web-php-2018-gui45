@@ -36,7 +36,7 @@
 		</div>
 		<?php foreach($jeux as $jeu){ ?>
 		<div>
-				<a href="detail.php?id=<?=$jeu['ID']?>"><?=$jeu['Nom']?></a>
+				<a href="public/detail.php?id=<?=$jeu['ID']?>"><?=$jeu['Nom']?></a>
 		</div>
 	<?php } ?>
 	</body>
