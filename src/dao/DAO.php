@@ -20,10 +20,10 @@
 
 			return $jeux;
 		}
-		function rechercherListe($nom)
+		function rechercherListe($recherche)
 		{
 			global $basededonnees;
-			$requete = $basededonnees->prepare("SELECT * FROM jeuxVideo");
+			$requete = $basededonnees->prepare("SELECT * FROM jeuxVideo WHERE Nom LIKE '%".$recherche."%' OR description LIKE '%".$recherche."%'");
 			$requete->execute();
 			$jeux = $requete->fetchAll();
 

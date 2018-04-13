@@ -3,10 +3,11 @@
 	include_once "dao/DAO.php";
 	$dao = new JeuDao();
 
-	if(!empty $_POST['recherche']){
+	if(!empty($_POST['recherche'])){
 		//print_r($_POST);
 		$item = $_POST['recherche'];
 		$liste = $dao->rechercherListe($item);
+		print_r($liste[0]['Nom']);
 	}
 	else {
 		$liste = $dao->lireListe();
@@ -30,7 +31,7 @@
 		<div>
 			<form method="post" action="" id="formulaire-recherche">
 				<input type="text" name="recherche" id="recherche">
-				<input type="submit" value="soumetre" name="action-recherche">
+				<input type="submit" value="rechercher" name="action-recherche">
 			</form>
 		</div>
 	</body>
