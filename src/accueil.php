@@ -21,11 +21,13 @@
 	function rechercher(){
 		console.log("keyup");
 		ajax = new Ajax();
-		ajax.executer("GET", "http://localhost/projet-web-php-2018-gui45/src/suggestion.php", recevoir);
+		donnee = document.getElementById("recherche").value;
+		ajax.executer("GET", "http://localhost/projet-web-php-2018-gui45/src/suggestion.php?valeur="+donnee, "", recevoir);
 	}
-	function recevoir()
+	function recevoir(ajax)
 	{
-		
+		//console.log(ajax.responseText);
+		document.getElementById("suggestion").innerHTML = ajax.responseText;
 	}
 	</script>
 	<meta charset="utf-8">
@@ -45,7 +47,10 @@
 				<input type="text" name="recherche" id="recherche" onkeyup="rechercher()" value="<?=$_POST['recherche']?>">
 				<input type="submit" value="rechercher" name="action-recherche">
 			</form>
+			<div id="suggestion">
+			</div>
 		</div>
+		<h3>liste</h3>
 		<?php foreach($jeux as $jeu){ ?>
 		<div>
 				<a href="public/detail.php?id=<?=$jeu['ID']?>"><?=$jeu['Nom']?></a>
