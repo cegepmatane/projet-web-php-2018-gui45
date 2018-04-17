@@ -20,6 +20,12 @@
 	<script>
 	function rechercher(){
 		console.log("keyup");
+		ajax = new Ajax();
+		ajax.executer("GET", "http://localhost/projet-web-php-2018-gui45/src/suggestion.php", recevoir);
+	}
+	function recevoir()
+	{
+		
 	}
 	</script>
 	<meta charset="utf-8">
