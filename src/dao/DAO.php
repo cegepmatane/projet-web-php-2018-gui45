@@ -25,8 +25,8 @@
 			global $basededonnees;
 			$SQL_RECHERCHER_LISTE = "SELECT * FROM jeuxVideo WHERE Nom LIKE '%".$recherche."%'";
 			$requete = $basededonnees->prepare($SQL_RECHERCHER_LISTE);
-			//$requete->bindParam(':recherche', $recherche, PDO::PARAM_STR);
-			//$requete->bindParam(':recherche', $recherche, PDO::PARAM_STR);
+			$requete->bindParam(':recherche', $recherche, PDO::PARAM_STR);
+			$requete->bindParam(':recherche', $recherche, PDO::PARAM_STR);
 			$requete->execute();
 			$jeux = $requete->fetchAll();
 
@@ -37,8 +37,7 @@
 			global $basededonnees;
 			$SQL_RECHERCHER_LISTE = "SELECT Nom FROM jeuxVideo WHERE Nom LIKE '%".$recherche."%'";
 			$requete = $basededonnees->prepare($SQL_RECHERCHER_LISTE);
-			//$requete->bindParam(':recherche', $recherche, PDO::PARAM_STR);
-			//$requete->bindParam(':recherche', $recherche, PDO::PARAM_STR);
+			$requete->bindParam(':recherche', $recherche, PDO::PARAM_STR);
 			$requete->execute();
 			$jeux = $requete->fetchAll();
 
