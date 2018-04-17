@@ -67,5 +67,16 @@
 
       return $jeu;
     }
+    function rechercherSuggestion($recherche)
+		{
+			global $basededonnees;
+			$SQL_RECHERCHER_LISTE = "SELECT Nom FROM jeuxVideo WHERE Nom LIKE '%".$recherche."%'";
+			$requete = $basededonnees->prepare($SQL_RECHERCHER_LISTE);
+			$requete->bindParam(':recherche', $recherche, PDO::PARAM_STR);
+			$requete->execute();
+			$jeux = $requete->fetchAll();
+
+			return $jeux;
+		}
   }
 ?>

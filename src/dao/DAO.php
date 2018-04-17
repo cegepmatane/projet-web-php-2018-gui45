@@ -33,7 +33,7 @@
 
 			return $jeux;
 		}
-		function rechercherSuggestion($recherche)
+		function rechercherSuggestion($recherche)//public
 		{
 			global $basededonnees;
 			$SQL_RECHERCHER_LISTE = "SELECT Nom FROM jeuxVideo WHERE Nom LIKE '%".$recherche."%'";
@@ -144,7 +144,7 @@
 			$requete->bindParam(':id', $genre['idGenre'], PDO::PARAM_INT);
 			$requete->execute();
 		}
-		function ajouterMembre($membre)//admin
+		function ajouterMembre($membre)//connection
 		{
 			global $basededonnees;
 			$SQL_AJOUTER_MEMBRE = "INSERT INTO membre(prenom, nom, couriel, telephone, adresse, motDePasse, sexe) VALUES(:prenom, :nom, :couriel, :telephone, :adresse, :motDePasse, :sexe)";
@@ -158,7 +158,7 @@
 			$requete->bindParam(':sexe', $membre['sexe'], PDO::PARAM_STR);
 			$requete->execute();
 		}
-		function trouverMembre($membre)
+		function trouverMembre($membre)//connecion
 		{
 			global $basededonnees;
 			$SQL_TROUVER_MEMBRE = "SELECT * FROM membre WHERE prenom = :prenom";

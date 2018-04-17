@@ -68,19 +68,5 @@
       $requete->bindParam(':id', $genre['idGenre'], PDO::PARAM_INT);
       $requete->execute();
     }
-    function ajouterMembre($membre)
-    {
-      global $basededonnees;
-      $SQL_AJOUTER_MEMBRE = "INSERT INTO membre(prenom, nom, couriel, telephone, adresse, motDePasse, sexe) VALUES(:prenom, :nom, :couriel, :telephone, :adresse, :motDePasse, :sexe)";
-      $requete = $basededonnees->prepare($SQL_AJOUTER_MEMBRE);
-      $requete->bindParam(':prenom', $membre['prenom'], PDO::PARAM_STR);
-      $requete->bindParam(':nom', $membre['nom'], PDO::PARAM_STR);
-      $requete->bindParam(':couriel', $membre['couriel'], PDO::PARAM_STR);
-      $requete->bindParam(':telephone', $membre['telephone'], PDO::PARAM_STR);
-      $requete->bindParam(':adresse', $membre['adresse'], PDO::PARAM_STR);
-      $requete->bindParam(':motDePasse', $membre['motDePasse'], PDO::PARAM_STR);
-      $requete->bindParam(':sexe', $membre['sexe'], PDO::PARAM_STR);
-      $requete->execute();
-    }
   }
   ?>
