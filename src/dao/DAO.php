@@ -14,7 +14,8 @@
 		function lireListe()
 		{
 			global $basededonnees;
-			$requete = $basededonnees->prepare("SELECT * FROM jeuxVideo");
+			$SQL_LIRE_LISTE = "SELECT * FROM jeuxVideo";
+			$requete = $basededonnees->prepare($SQL_LIRE_LISTE);
 			$requete->execute();
 			$jeux = $requete->fetchAll();
 
@@ -46,7 +47,8 @@
 		function lireGenres()
 		{
 			global $basededonnees;
-			$requete = $basededonnees->prepare("SELECT * FROM genre");
+			$SQL_LIRE_GENRES = "SELECT * FROM genre";
+			$requete = $basededonnees->prepare($SQL_LIRE_GENRE);
 			$requete->execute();
 			$genres = $requete->fetchAll();
 
@@ -55,7 +57,8 @@
 		function lireGenre($id)
 		{
 			global $basededonnees;
-			$requete = $basededonnees->prepare("SELECT * FROM genre WHERE ID=:id");
+			$SQL_LIRE_GENRE = "SELECT * FROM genre WHERE ID=:id";
+			$requete = $basededonnees->prepare($SQL_LIRE_GENRE);
 			$requete->bindParam(':id', $id, PDO::PARAM_INT);
 			$requete->execute();
 			$genre = $requete->fetch();
@@ -65,7 +68,8 @@
 		function lireGenreJeu($id)
 		{
 			global $basededonnees;
-			$requete = $basededonnees->prepare("SELECT * FROM jeuxVideo WHERE idGenre=:id");
+			$SQL_LIRE_GENRE_JEU = "SELECT * FROM jeuxVideo WHERE idGenre=:id";
+			$requete = $basededonnees->prepare($SQL_LIRE_GENRE_JEU);
 			$requete->bindParam(':id', $id, PDO::PARAM_INT);
 			$requete->execute();
 			$jeux = $requete->fetchAll();
@@ -75,7 +79,8 @@
 		function lireJeu($id)
 		{
 			global $basededonnees;
-			$requete = $basededonnees->prepare("SELECT * FROM jeuxVideo WHERE ID = :id");
+			$SQL_LIRE_JEU = "SELECT * FROM jeuxVideo WHERE ID = :id";
+			$requete = $basededonnees->prepare($SQL_LIRE_JEU);
 			$requete->bindParam(':id', $id, PDO::PARAM_INT);
 			$requete->execute();
 			$jeu = $requete->fetch();
@@ -85,7 +90,6 @@
 		function ajouter($jeux)
 		{
 			global $basededonnees;
-			//$SQL_AJOUTER_JEU = "INSERT INTO jeuxVideo(nom, description, idGenre) VALUES('".$jeux['nom']."','".$jeux['description']."','".$jeux['idGenre']."')";
 			$SQL_AJOUTER_JEU = "INSERT INTO jeuxVideo(nom, description, idGenre) VALUES(:nom,:description,:idGenre)";
 			$requete = $basededonnees->prepare($SQL_AJOUTER_JEU);
 			$requete->bindParam(':nom', $jeux['nom'], PDO::PARAM_STR);
@@ -133,7 +137,6 @@
 		{
 			echo("allo");
 			global $basededonnees;
-			//$SQL_MODIFIER_JEU = "UPDATE genre SET Nom = '".$genre['nomGenre']."' WHERE genre.ID = '".$genre['idGenre']."';";
 			$SQL_MODIFIER_GENRE = "UPDATE genre SET Nom = :nom, description = :description WHERE genre.ID = :id;";
 			$requete = $basededonnees->prepare($SQL_MODIFIER_GENRE);
 			$requete->bindParam(':nom', $genre['nomGenre'], PDO::PARAM_STR);
