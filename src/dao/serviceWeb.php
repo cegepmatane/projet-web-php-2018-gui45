@@ -1,7 +1,7 @@
 <?php
-  include_once "DAO.php";
+  include_once "DaoPublic.php";
 
-  $dao = new JeuDAO();
+  $dao = new DaoPublic();
   $listeGenre = $dao->lireGenres();
 
   header("Content-type: text/xml");

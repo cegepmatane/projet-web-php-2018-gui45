@@ -28,7 +28,7 @@
     {
       global $basededonnees;
       $SQL_LIRE_GENRES = "SELECT * FROM genre";
-      $requete = $basededonnees->prepare($SQL_LIRE_GENRE);
+      $requete = $basededonnees->prepare($SQL_LIRE_GENRES);
       $requete->execute();
       $genres = $requete->fetchAll();
 
