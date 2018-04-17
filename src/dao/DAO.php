@@ -2,7 +2,7 @@
 	include_once "baseDeDonner.php";
 	class JeuDAO
 	{
-		function ajouterImage($image, $id)
+		function ajouterImage($image, $id)//admin
 		{
 			global $basededonnees;
 			$SQL_AJOUTER_JEU = "UPDATE jeuxvideo SET image=:image WHERE jeuxvideo.ID = :id;";
@@ -87,7 +87,7 @@
 
 			return $jeu;
 		}
-		function ajouter($jeux)
+		function ajouter($jeux)//admin
 		{
 			global $basededonnees;
 			$SQL_AJOUTER_JEU = "INSERT INTO jeuxVideo(nom, description, idGenre) VALUES(:nom,:description,:idGenre)";
@@ -97,7 +97,7 @@
 			$requete->bindParam(':idGenre', $jeux['idGenre'], PDO::PARAM_INT);
 			$requete->execute();
 		}
-		function ajouterGenre($genre)
+		function ajouterGenre($genre)//admin
 		{
 			global $basededonnees;
 			$SQL_AJOUTER_GENRE = "INSERT INTO genre(nom, description) VALUES(:nom, :description)";
@@ -106,7 +106,7 @@
 			$requete->bindParam(':description', $genre['description'], PDO::PARAM_STR);
 			$requete->execute();
 		}
-		function suprimer($id)
+		function suprimer($id)//admin
 		{
 			global $basededonnees;
 			$SQL_EFFACER_JEU = "DELETE FROM jeuxVideo WHERE ID = :id";
