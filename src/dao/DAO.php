@@ -23,7 +23,20 @@
 		function rechercherListe($recherche)
 		{
 			global $basededonnees;
-			$requete = $basededonnees->prepare("SELECT * FROM jeuxVideo WHERE Nom LIKE '%".$recherche."%' OR description LIKE '%.".$recherche."%'");
+			$SQL_RECHERCHER_LISTE = "SELECT * FROM jeuxVideo WHERE Nom LIKE '%".$recherche."%'";
+			$requete = $basededonnees->prepare($SQL_RECHERCHER_LISTE);
+			//$requete->bindParam(':recherche', $recherche, PDO::PARAM_STR);
+			//$requete->bindParam(':recherche', $recherche, PDO::PARAM_STR);
+			$requete->execute();
+			$jeux = $requete->fetchAll();
+
+			return $jeux;
+		}
+		function rechercherSuggestion($recherche)
+		{
+			global $basededonnees;
+			$SQL_RECHERCHER_LISTE = "SELECT Nom FROM jeuxVideo WHERE Nom LIKE '%".$recherche."%'";
+			$requete = $basededonnees->prepare($SQL_RECHERCHER_LISTE);
 			//$requete->bindParam(':recherche', $recherche, PDO::PARAM_STR);
 			//$requete->bindParam(':recherche', $recherche, PDO::PARAM_STR);
 			$requete->execute();

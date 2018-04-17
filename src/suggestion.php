@@ -1,14 +1,12 @@
 <?php
-
+include_once "dao/DAO.php";
+$dao = new JeuDao();
 $recherche = filter_var($_GET['valeur'], FILTER_SANITIZE_STRING);
-$jeux = $dao->rechercherListe($recherche);
-
+$jeux = $dao->rechercherSuggestion($recherche);
 ?>
 
 <ul>
-<?php
-
-?>
-
-</ul>
+<?php foreach($jeux as $jeu){ ?>
+	<li><a href="#" onclick="afficher('<?=$jeu['Nom']?>')"><?=$jeu['Nom']?></a></li>
 <?php } ?>
+</ul>
