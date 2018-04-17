@@ -11,7 +11,7 @@
 			$requete->bindParam(':id', $id, PDO::PARAM_LOB);
 			$requete->execute();
 		}
-		function lireListe()
+		function lireListe()//public
 		{
 			global $basededonnees;
 			$SQL_LIRE_LISTE = "SELECT * FROM jeuxVideo";
@@ -21,7 +21,7 @@
 
 			return $jeux;
 		}
-		function rechercherListe($recherche)
+		function rechercherListe($recherche)//public
 		{
 			global $basededonnees;
 			$SQL_RECHERCHER_LISTE = "SELECT * FROM jeuxVideo WHERE Nom LIKE '%".$recherche."%'";
@@ -44,7 +44,7 @@
 
 			return $jeux;
 		}
-		function lireGenres()
+		function lireGenres()//public
 		{
 			global $basededonnees;
 			$SQL_LIRE_GENRES = "SELECT * FROM genre";
@@ -54,7 +54,7 @@
 
 			return $genres;
 		}
-		function lireGenre($id)
+		function lireGenre($id)//public
 		{
 			global $basededonnees;
 			$SQL_LIRE_GENRE = "SELECT * FROM genre WHERE ID=:id";
@@ -65,7 +65,7 @@
 
 			return $genre;
 		}
-		function lireGenreJeu($id)
+		function lireGenreJeu($id)//public
 		{
 			global $basededonnees;
 			$SQL_LIRE_GENRE_JEU = "SELECT * FROM jeuxVideo WHERE idGenre=:id";
@@ -76,7 +76,7 @@
 
 			return $jeux;
 		}
-		function lireJeu($id)
+		function lireJeu($id)//public
 		{
 			global $basededonnees;
 			$SQL_LIRE_JEU = "SELECT * FROM jeuxVideo WHERE ID = :id";
@@ -114,7 +114,7 @@
 			$requete->bindParam(':id', $id, PDO::PARAM_INT);
 			$requete->execute();
 		}
-		function suprimerGenre($id)
+		function suprimerGenre($id)//admin
 		{
 			global $basededonnees;
 			$SQL_EFFACER_GENRE = "DELETE FROM genre WHERE ID = :id";
@@ -122,7 +122,7 @@
 			$requete->bindParam(':id', $id, PDO::PARAM_INT);
 			$requete->execute();
 		}
-		function modifier($jeu)
+		function modifier($jeu)//admin
 		{
 			global $basededonnees;
 			$SQL_MODIFIER_JEU = "UPDATE jeuxvideo SET Nom = :nom, description = :description, idGenre=:idGenre WHERE jeuxvideo.ID = :id;";
@@ -133,7 +133,7 @@
 			$requete->bindParam(':idGenre', $jeu['idGenre'], PDO::PARAM_INT);
 			$requete->execute();
 		}
-		function modifierGenre($genre)
+		function modifierGenre($genre)//admin
 		{
 			echo("allo");
 			global $basededonnees;
@@ -144,7 +144,7 @@
 			$requete->bindParam(':id', $genre['idGenre'], PDO::PARAM_INT);
 			$requete->execute();
 		}
-		function ajouterMembre($membre)
+		function ajouterMembre($membre)//admin
 		{
 			global $basededonnees;
 			$SQL_AJOUTER_MEMBRE = "INSERT INTO membre(prenom, nom, couriel, telephone, adresse, motDePasse, sexe) VALUES(:prenom, :nom, :couriel, :telephone, :adresse, :motDePasse, :sexe)";
