@@ -1,7 +1,7 @@
 <?php
 	include_once "public/connecter.php";
-	include_once "dao/DAO.php";
-	$dao = new JeuDao();
+	include_once "dao/DaoPublic.php";
+	$dao = new DaoPublic();
 
 	if(!empty($_POST['recherche'])){
 		//print_r($_POST);

@@ -1,6 +1,6 @@
 <?php
-  include_once "../dao/DAO.php";
-  $jeuDao = new JeuDAO();
+  include_once "../dao/DaoConnection.php";
+  $jeuDao = new DaoConnection();
   $filtreValeurs = array();
   $filtreValeurs['motDePasse'] = FILTER_SANITIZE_ENCODED;
   $filtreValeurs['prenom'] = FILTER_SANITIZE_ENCODED;

@@ -1,6 +1,6 @@
 <?php
-include_once "dao/DAO.php";
-$dao = new JeuDao();
+include_once "dao/DaoPublic.php";
+$dao = new DaoPublic();
 $recherche = filter_var($_GET['valeur'], FILTER_SANITIZE_STRING);
 $jeux = $dao->rechercherSuggestion($recherche);
 ?>

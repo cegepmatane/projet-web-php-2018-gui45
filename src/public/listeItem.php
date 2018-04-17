@@ -1,7 +1,7 @@
 <?php
-	include_once "../dao/DAO.php";
+	include_once "../dao/DaoPublic.php";
 	include_once "connecter.php";
-	$jeuDao = new JeuDAO();
+	$jeuDao = new DaoPublic();
 	$jeux = $jeuDao->lireGenreJeu($_GET['id']);
 	//print_r($jeux);
 ?>

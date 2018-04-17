@@ -1,6 +1,6 @@
 <?php
 	include_once "baseDeDonner.php";
-	class DaoPublic
+	class DaoConnection
 	{
     function ajouterMembre($membre)
 		{
