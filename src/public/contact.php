@@ -9,26 +9,26 @@
 </head>
 <body>
 	<section id="">
-		<h1>Projet Liste</h1>
-		<h2>page contact</h2>
+		<h1><?=_("Projet Liste")?></h1>
+		<h2><?=_("page contact")?></h2>
 		<form>
 
 			<div>
-				<label for="">nom</label>
+				<label for=""><?=_("nom")?></label>
 				<input type="" name="" id="">
 			</div>
 			<div>
-				<label for="">addresse</label>
+				<label for=""><?=_("addresse")?></label>
 				<input type="" name="" id="">
 			</div>
 			<div>
-				<label for="">telephone</label>
+				<label for=""><?=_("telephone")?></label>
 				<input type="" name="" id="">
 			</div>
 
 			<input type="submit" value="valider">
 
 	</section>
-	<a href="../accueil.php">retour</a>
+	<a href="../accueil.php"><?=_("retour")?></a>
 </body>
 </html>

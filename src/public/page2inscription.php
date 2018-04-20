@@ -16,25 +16,25 @@ $_SESSION['membre'] = filter_var_array($_POST, $filtreValeurs);
 </head>
 <body>
 	<section id="">
-		<h1>Projet Liste</h1>
-		<h2>Inscription</h2>
+		<h1><?=_("Projet Liste")?></h1>
+		<h2><?=_("Inscription")?></h2>
 		<form method="POST" action="actionInscription.php">
       <div>
-        <label for="motDePasse">mot De Passe</label>
+        <label for="motDePasse"><?=_("mot De Passe")?></label>
         <input type="password" name="motDePasse" id="motDePasse">
       </div>
   		<div>
-  			<label >sexe</label>
-        <label for="homme">homme</label>
+  			<label ><?=_("sexe")?></label>
+        <label for="homme"><?=_("homme")?></label>
   			<input type="radio" name="sexe" id="homme" value="homme">
-        <label for="femme">femme</label>
+        <label for="femme"><?=_("femme")?></label>
         <input type="radio" name="sexe" id="femme" value="femme">
-        <label for="autre">autre</label>
+        <label for="autre"><?=_("autre")?></label>
         <input type="radio" name="sexe" id="autre" value="autre">
   		</div>
   			<input type="submit" value="soumettre">
     </form>
 	</section>
-	<a href="../accueil.php">retour</a>
+	<a href="../accueil.php"><?=_("retour")?></a>
 </body>
 </html>

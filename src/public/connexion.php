@@ -6,20 +6,20 @@
 </head>
 <body>
 	<section id="">
-		<h1>Projet Liste</h1>
-		<h2>Inscription</h2>
+		<h1><?=_("Projet Liste")?></h1>
+		<h2><?=_("Inscription")?></h2>
 		<form method="POST" action="actionConnexion.php">
       <div>
-        <label for="motDePasse">mot De Passe</label>
+        <label for="motDePasse"><?=_("mot De Passe")?></label>
         <input type="password" name="motDePasse" id="motDePasse">
       </div>
   		<div>
-        <label for="prenom">prenom</label>
+        <label for="prenom"><?=_("prenom")?></label>
         <input type="text" name="prenom" id="prenom">
   		</div>
   			<input type="submit" value="soumettre">
     </form>
 	</section>
-	<a href="../accueil.php">retour</a>
+	<a href="../accueil.php"><?=_("retour")?></a>
 </body>
 </html>

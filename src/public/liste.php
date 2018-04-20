@@ -14,8 +14,8 @@
 		<title>liste jeux</title>
 	</head>
 	<body>
-		<h1>Projet Liste</h1>
-		<h2>liste de genres</h2>
+		<h1><?=_("Projet Liste")?></h1>
+		<h2><?=_("liste de genres")?></h2>
 		<div>
 			<?php
 			foreach($genres as $genre)
@@ -26,7 +26,7 @@
 				<?php
 			}?>
 		</div>
-		<a href="../accueil.php">retour</a>
+		<a href="../accueil.php"><?=_("retour")?></a>
 	</body>
 	<link rel="stylesheet" type="text/css" href="style.css">
 	<link rel="stylesheet" type="text/css" href="styleListe.css">

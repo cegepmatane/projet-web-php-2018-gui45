@@ -11,8 +11,8 @@
 		<title>liste jeux</title>
 	</head>
 	<body>
-		<h1>Projet Liste</h1>
-		<h2>liste de jeu</h2>
+		<h1><?=_("Projet Liste")?></h1>
+		<h2><?=_("liste de jeu")?></h2>
 		<div>
 			<h3><?=$_GET['nom']?></h3>
 			<p><?=$_GET['description']?></p>
@@ -24,7 +24,7 @@
 				<?php
 			}?>
 		</div>
-		<a href="liste.php">retour</a>
+		<a href="liste.php"><?=_("retour")?></a>
 	</body>
 	<link rel="stylesheet" type="text/css" href="style.css">
 </html>

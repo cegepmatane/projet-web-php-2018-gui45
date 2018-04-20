@@ -6,32 +6,32 @@
 </head>
 <body>
 	<section id="">
-		<h1>Projet Liste</h1>
-		<h2>Inscription</h2>
+		<h1><?=_("Projet Liste")?></h1>
+		<h2><?=_("Inscription")?></h2>
 		<form method="POST" action="page2inscription.php">
       <div>
-        <label for="prenom">prenom</label>
+        <label for="prenom"><?=_("prenom")?></label>
         <input type="text" name="prenom" id="prenom">
       </div>
 			<div>
-				<label for="nom">nom</label>
+				<label for="nom"><?=_("nom")?></label>
 				<input type="text" name="nom" id="nom">
 			</div>
 			<div>
-				<label for="couriel">couriel</label>
+				<label for="couriel"><?=_("couriel")?></label>
 				<input type="email" name="couriel" id="couriel">
 			</div>
 			<div>
-				<label for="telephone">telephone</label>
+				<label for="telephone"><?=_("telephone")?></label>
 				<input type="text" name="telephone" id="telephone">
 			</div>
       <div>
-        <label for="adresse">adresse</label>
+        <label for="adresse"><?=_("adresse")?></label>
         <input type="text" name="adresse" id="adresse">
       </div>
 			<input type="submit" value="suivant">
     </form>
 	</section>
-	<a href="../accueil.php">retour</a>
+	<a href="../accueil.php"><?=_("retour")?></a>
 </body>
 </html>

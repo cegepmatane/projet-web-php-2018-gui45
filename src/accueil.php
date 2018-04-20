@@ -39,23 +39,23 @@
 	<title>accueil</title>
 </head>
 	<body>
-		<h1>Projet Liste</h1>
-		<h2>accueil</h2>
+		<h1><?=_("Projet Liste")?></h1>
+		<h2><?=_("accueil")?></h2>
 		<div>
-			<a href="public/liste.php">Page liste</a>
-			<a href="public/contact.php">Page contact</a>
+			<a href="public/liste.php"><?=_("Page liste")?></a>
+			<a href="public/contact.php"><?=_("Page contact")?></a>
 		</div>
-		<a href="public/page1inscription.php">s'inscrire</a>
-		<a href="public/connexion.php">se connecter</a>
+		<a href="public/page1inscription.php"><?=_("s'inscrire")?></a>
+		<a href="public/connexion.php"><?=_("se connecter")?></a>
 		<div>
 			<form method="post" action="" id="formulaire-recherche">
-				<input type="text" name="recherche" id="recherche" onkeyup="rechercher()" value="<?=$_POST['recherche']?>">
+				<input type="text" name="recherche" id="recherche" onkeyup="rechercher()">
 				<input type="submit" value="rechercher" name="action-recherche">
 			</form>
 			<div id="suggestion">
 			</div>
 		</div>
-		<h3>liste</h3>
+		<h3><?=_("liste")?></h3>
 		<?php foreach($jeux as $jeu){ ?>
 		<div>
 				<a href="public/detail.php?id=<?=$jeu['ID']?>"><?=$jeu['Nom']?></a>

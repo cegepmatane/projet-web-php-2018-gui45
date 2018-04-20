@@ -12,11 +12,11 @@
 		<title>detail</title>
 	</head>
 	<body>
-		<h1>Projet Liste</h1>
-		<h2>page detail</h2>
+		<h1><?=_("Projet Liste")?></h1>
+		<h2><?=_("page detail")?></h2>
 		<h3><?=$item['Nom']?></h3>
 		<img src="<?=$item['image']?>">
 		<p><?php print_r($item['description']) ?></p>
-		<a href="liste.php">retour</a>
+		<a href="liste.php"><?=_("retour")?></a>
 	</body>
 </html>
