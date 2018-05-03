@@ -1,4 +1,5 @@
 <?php
+	include_once "configuration_dev.php";
 	include_once "public/connecter.php";
 	include_once "dao/DaoPublic.php";
 	$dao = new DaoPublic();

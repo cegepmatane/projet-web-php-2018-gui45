@@ -1,3 +1,6 @@
+<?php
+	include_once "configuration_dev.php";
+?>
 <!doctype html>
 <html lang="fr">
 <head>

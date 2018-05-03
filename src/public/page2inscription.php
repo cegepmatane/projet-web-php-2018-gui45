@@ -1,12 +1,13 @@
 <?php
-session_start();
-$filtreValeurs = array();
-$filtreValeurs['prenom'] = FILTER_SANITIZE_ENCODED;
-$filtreValeurs['nom'] = FILTER_SANITIZE_ENCODED;
-$filtreValeurs['couriel'] = FILTER_SANITIZE_ENCODED;
-$filtreValeurs['telephone'] = FILTER_SANITIZE_ENCODED;
-$filtreValeurs['adresse'] = FILTER_SANITIZE_ENCODED;
-$_SESSION['membre'] = filter_var_array($_POST, $filtreValeurs);
+	include_once "configuration_dev.php";
+	session_start();
+	$filtreValeurs = array();
+	$filtreValeurs['prenom'] = FILTER_SANITIZE_ENCODED;
+	$filtreValeurs['nom'] = FILTER_SANITIZE_ENCODED;
+	$filtreValeurs['couriel'] = FILTER_SANITIZE_ENCODED;
+	$filtreValeurs['telephone'] = FILTER_SANITIZE_ENCODED;
+	$filtreValeurs['adresse'] = FILTER_SANITIZE_ENCODED;
+	$_SESSION['membre'] = filter_var_array($_POST, $filtreValeurs);
 ?>
 <!doctype html>
 <html lang="fr">

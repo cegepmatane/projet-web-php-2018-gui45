@@ -1,6 +1,7 @@
 <?php
 	include_once "connecter.php";
 	include_once "../dao/DaoPublic.php";
+	include_once "configuration_dev.php";
 	$jeuDao = new DaoPublic();
 	$id = filter_var($_GET['id'], FILTER_SANITIZE_NUMBER_INT);
 	$item = $jeuDao->lireJeu($id);
