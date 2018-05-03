@@ -1,0 +1,119 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: projet_web\n"
+"POT-Creation-Date: 2018-05-03 13:36-0400\n"
+"PO-Revision-Date: 2018-05-03 13:38-0400\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: fr_CA\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.0.7\n"
+"X-Poedit-Basepath: ../../../Bitnami/wampstack-7.1.16-0/apache2/htdocs/projet-"
+"web-php-2018-gui45\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: _\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: src/accueil.php:42 src/public/connexion.php:9 src/public/contact.php:12
+#: src/public/detail.php:15 src/public/liste.php:17 src/public/listeItem.php:14
+#: src/public/page1inscription.php:9 src/public/page2inscription.php:19
+msgid "Projet Liste"
+msgstr ""
+
+#: src/accueil.php:43
+msgid "accueil"
+msgstr ""
+
+#: src/accueil.php:45
+msgid "Page liste"
+msgstr ""
+
+#: src/accueil.php:46
+msgid "Page contact"
+msgstr ""
+
+#: src/accueil.php:48
+msgid "s'inscrire"
+msgstr ""
+
+#: src/accueil.php:49
+msgid "se connecter"
+msgstr ""
+
+#: src/accueil.php:58
+msgid "liste"
+msgstr ""
+
+#: src/public/connexion.php:10 src/public/page1inscription.php:10
+#: src/public/page2inscription.php:20
+msgid "Inscription"
+msgstr ""
+
+#: src/public/connexion.php:13 src/public/page2inscription.php:23
+msgid "mot De Passe"
+msgstr ""
+
+#: src/public/connexion.php:17 src/public/page1inscription.php:13
+msgid "prenom"
+msgstr ""
+
+#: src/public/connexion.php:23 src/public/contact.php:32
+#: src/public/detail.php:20 src/public/liste.php:29 src/public/listeItem.php:27
+#: src/public/page1inscription.php:35 src/public/page2inscription.php:38
+msgid "retour"
+msgstr ""
+
+#: src/public/contact.php:13
+msgid "page contact"
+msgstr ""
+
+#: src/public/contact.php:17 src/public/page1inscription.php:17
+msgid "nom"
+msgstr ""
+
+#: src/public/contact.php:21
+msgid "addresse"
+msgstr ""
+
+#: src/public/contact.php:25 src/public/page1inscription.php:25
+msgid "telephone"
+msgstr ""
+
+#: src/public/detail.php:16
+msgid "page detail"
+msgstr ""
+
+#: src/public/liste.php:18
+msgid "liste de genres"
+msgstr ""
+
+#: src/public/listeItem.php:15
+msgid "liste de jeu"
+msgstr ""
+
+#: src/public/page1inscription.php:21
+msgid "couriel"
+msgstr ""
+
+#: src/public/page1inscription.php:29
+msgid "adresse"
+msgstr ""
+
+#: src/public/page2inscription.php:27
+msgid "sexe"
+msgstr ""
+
+#: src/public/page2inscription.php:28
+msgid "homme"
+msgstr ""
+
+#: src/public/page2inscription.php:30
+msgid "femme"
+msgstr ""
+
+#: src/public/page2inscription.php:32
+msgid "autre"
+msgstr ""
