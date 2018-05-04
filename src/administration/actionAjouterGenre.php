@@ -2,7 +2,7 @@
 	include_once "connecterAdmin.php";
 	if(!empty($_POST["ajouterGenre"]))
 	{
-		include_once "../dao/DAO.php";
+		include_once "../dao/DaoAdmin.php";
 		$jeuDao = new JeuDAO();
 
 		$filtreGenres = array();

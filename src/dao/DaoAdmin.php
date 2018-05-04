@@ -1,5 +1,6 @@
 <?php
 	include_once "baseDeDonner.php";
+	$local = 'fr';
 	class DaoPublic
 	{
     function ajouterImage($image, $id)
@@ -13,8 +14,9 @@
 		}
     function ajouter($jeux)
 		{
+			global $local;
 			global $basededonnees;
-			$SQL_AJOUTER_JEU = "INSERT INTO jeuxVideo(nom, description, idGenre) VALUES(:nom,:description,:idGenre)";
+			$SQL_AJOUTER_JEU = "INSERT INTO jeuxVideo(nom, description_".$local.", idGenre) VALUES(:nom,:description,:idGenre)";
 			$requete = $basededonnees->prepare($SQL_AJOUTER_JEU);
 			$requete->bindParam(':nom', $jeux['nom'], PDO::PARAM_STR);
 			$requete->bindParam(':description', $jeux['description'], PDO::PARAM_STR);
@@ -23,8 +25,9 @@
 		}
 		function ajouterGenre($genre)
 		{
+			global $local;
 			global $basededonnees;
-			$SQL_AJOUTER_GENRE = "INSERT INTO genre(nom, description) VALUES(:nom, :description)";
+			$SQL_AJOUTER_GENRE = "INSERT INTO genre(nom, description_".$local.") VALUES(:nom, :description)";
 			$requete = $basededonnees->prepare($SQL_AJOUTER_GENRE);
 			$requete->bindParam(':nom', $genre['nom'], PDO::PARAM_STR);
 			$requete->bindParam(':description', $genre['description'], PDO::PARAM_STR);
@@ -48,8 +51,9 @@
     }
     function modifier($jeu)
     {
+			global $local;
       global $basededonnees;
-      $SQL_MODIFIER_JEU = "UPDATE jeuxvideo SET Nom = :nom, description = :description, idGenre=:idGenre WHERE jeuxvideo.ID = :id;";
+      $SQL_MODIFIER_JEU = "UPDATE jeuxvideo SET Nom = :nom, description_".$local." = :description, idGenre=:idGenre WHERE jeuxvideo.ID = :id;";
       $requete = $basededonnees->prepare($SQL_MODIFIER_JEU);
       $requete->bindParam(':nom', $jeu['nom'], PDO::PARAM_STR);
       $requete->bindParam(':description', $jeu['description'], PDO::PARAM_STR);
@@ -59,9 +63,9 @@
     }
     function modifierGenre($genre)
     {
-      echo("allo");
+      global $local;
       global $basededonnees;
-      $SQL_MODIFIER_GENRE = "UPDATE genre SET Nom = :nom, description = :description WHERE genre.ID = :id;";
+      $SQL_MODIFIER_GENRE = "UPDATE genre SET Nom = :nom, description_".$local." = :description WHERE genre.ID = :id;";
       $requete = $basededonnees->prepare($SQL_MODIFIER_GENRE);
       $requete->bindParam(':nom', $genre['nomGenre'], PDO::PARAM_STR);
       $requete->bindParam(':description', $genre['description'], PDO::PARAM_STR);
