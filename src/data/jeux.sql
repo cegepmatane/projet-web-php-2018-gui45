@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : localhost:3306
--- Généré le :  jeu. 05 avr. 2018 à 15:12
+-- Généré le :  ven. 04 mai 2018 à 16:21
 -- Version du serveur :  5.7.21
 -- Version de PHP :  7.1.13
 
@@ -31,18 +31,19 @@ SET time_zone = "+00:00";
 CREATE TABLE `genre` (
   `ID` int(11) NOT NULL,
   `Nom` varchar(50) NOT NULL,
-  `description` text NOT NULL
+  `description-fr` text NOT NULL,
+  `description-en` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Déchargement des données de la table `genre`
 --
 
-INSERT INTO `genre` (`ID`, `Nom`, `description`) VALUES
-(1, 'MMO', 'Massive multiplayer online'),
-(2, 'FPS', 'First person shooter'),
-(3, 'MOBA', 'Multiplayer online battle arena'),
-(4, 'RPG', 'Role playing game');
+INSERT INTO `genre` (`ID`, `Nom`, `description-fr`, `description-en`) VALUES
+(1, 'MMO', 'Massive multiplayer online', 'Massive multiplayer online'),
+(2, 'FPS', 'First person shooter', 'First person shooter'),
+(3, 'MOBA', 'Multiplayer online battle arena', 'Multiplayer online battle arena'),
+(4, 'RPG', 'Role playing game', 'Role playing game');
 
 -- --------------------------------------------------------
 
@@ -53,7 +54,8 @@ INSERT INTO `genre` (`ID`, `Nom`, `description`) VALUES
 CREATE TABLE `jeuxvideo` (
   `ID` int(100) NOT NULL,
   `Nom` varchar(50) NOT NULL,
-  `description` varchar(1000) NOT NULL,
+  `description-fr` varchar(1000) NOT NULL,
+  `description-en` text NOT NULL,
   `idGenre` int(11) NOT NULL,
   `image` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
@@ -62,20 +64,20 @@ CREATE TABLE `jeuxvideo` (
 -- Déchargement des données de la table `jeuxvideo`
 --
 
-INSERT INTO `jeuxvideo` (`ID`, `Nom`, `description`, `idGenre`, `image`) VALUES
-(1, 'Eve online', 'eve est un mmo rpg baser dans le futur et dans l&#39;espace ', 1, '../illustration/blue.png'),
-(2, 'world of warcraft ', 'word of warcraft est un mmo rpg', 1, ''),
-(3, 'Battlefield 1', 'battlefield 1 est un fps de la ww1', 2, ''),
-(4, 'the elder scrolls online', 'TESO est une mmo rpg dans l\'univer de elder scrolls', 1, ''),
-(5, 'call of duty', 'cod est un fps', 2, ''),
-(7, 'counter strike', 'un jeu fps competitif multijoueur', 2, ''),
-(8, 'half life 2', 'un fps dont la trilogie ne ce conclura jamais', 2, '../illustration/miniaturebase.png'),
-(9, 'world of tanks', 'un jeu mmo / moba de tank', 1, '	\r\n../illustration/miniaturealecto.png'),
-(10, 'warthunder', 'une simulation mmo / moba de vehicule de guerre', 1, ''),
-(15, 'League of Legends', 'un moba', 3, ''),
-(16, 'Skyrim', 'un RPG', 4, ''),
-(17, 'Fallout 4', 'un rpg', 4, ''),
-(18, 'Dota', 'un moba', 3, '');
+INSERT INTO `jeuxvideo` (`ID`, `Nom`, `description-fr`, `description-en`, `idGenre`, `image`) VALUES
+(1, 'Eve online', 'eve est un mmo rpg baser dans le futur et dans lespace ', 'eve is a mmo rpg based in the future and in space', 1, '../illustration/blue.png'),
+(2, 'world of warcraft ', 'word of warcraft est un mmo rpg', 'world of warcraft is a mmo rpg', 1, ''),
+(3, 'Battlefield 1', 'battlefield 1 est un fps de la ww1', 'battlefield 1 is a fps with a ww1 theme', 2, ''),
+(4, 'the elder scrolls online', 'TESO est une mmo rpg dans l\'univer de elder scrolls', 'TESE is a mmo rpg based in the universe of elderscrolls', 1, ''),
+(5, 'call of duty', 'cod est un fps', 'cod is a fps', 2, ''),
+(7, 'counter strike', 'un jeu fps competitif multijoueur', 'a fps competive multiplayer game', 2, ''),
+(8, 'half life 2', 'un fps dont la trilogie ne ce conclura jamais', 'a trillogy that will never be completed', 2, '../illustration/miniaturebase.png'),
+(9, 'world of tanks', 'un jeu mmo / moba de tank', 'a mmo / moba with tanks', 1, '	\r\n../illustration/miniaturealecto.png'),
+(10, 'warthunder', 'une simulation mmo / moba de vehicule de guerre', 'a simulation mmo/ moba vehicular combat', 1, ''),
+(15, 'League of Legends', 'un moba', 'a moba', 3, ''),
+(16, 'Skyrim', 'un RPG', 'a rpg', 4, ''),
+(17, 'Fallout 4', 'un rpg', 'a rpg', 4, ''),
+(18, 'Dota', 'un moba', 'a moba', 3, '');
 
 -- --------------------------------------------------------
 
