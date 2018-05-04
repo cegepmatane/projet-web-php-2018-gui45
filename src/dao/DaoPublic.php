@@ -5,8 +5,9 @@
 	{
     function lireListe()
     {
+			global $local;
       global $basededonnees;
-      $SQL_LIRE_LISTE = "SELECT * FROM jeuxVideo";
+      $SQL_LIRE_LISTE = "SELECT ID, Nom,  description_".$local." AS description, idGenre, image FROM jeuxVideo";
       $requete = $basededonnees->prepare($SQL_LIRE_LISTE);
       $requete->execute();
       $jeux = $requete->fetchAll();
@@ -15,8 +16,9 @@
     }
     function rechercherListe($recherche)
     {
+			global $local;
       global $basededonnees;
-      $SQL_RECHERCHER_LISTE = "SELECT * FROM jeuxVideo WHERE Nom LIKE '%".$recherche."%'";
+      $SQL_RECHERCHER_LISTE = "SELECT ID, Nom,  description_".$local." AS description, idGenre, image FROM jeuxVideo WHERE Nom LIKE '%".$recherche."%'";
       $requete = $basededonnees->prepare($SQL_RECHERCHER_LISTE);
       $requete->bindParam(':recherche', $recherche, PDO::PARAM_STR);
       $requete->bindParam(':recherche', $recherche, PDO::PARAM_STR);
@@ -27,10 +29,10 @@
     }
     function lireGenres()
     {
+			global $local;
       global $basededonnees;
-      $SQL_LIRE_GENRES = "SELECT ID, Nom, description-:local AS description FROM genre";
+      $SQL_LIRE_GENRES = "SELECT ID, Nom, description_".$local." AS description FROM genre";
       $requete = $basededonnees->prepare($SQL_LIRE_GENRES);
-			$requete->bindParam(':local', $local, PDO::PARAM_STR);
       $requete->execute();
       $genres = $requete->fetchAll();
 
@@ -38,8 +40,9 @@
     }
     function lireGenre($id)
     {
+			global $local;
       global $basededonnees;
-      $SQL_LIRE_GENRE = "SELECT * FROM genre WHERE ID=:id";
+      $SQL_LIRE_GENRE = "SELECT ID, Nom, description_".$local." AS description FROM genre WHERE ID=:id";
       $requete = $basededonnees->prepare($SQL_LIRE_GENRE);
       $requete->bindParam(':id', $id, PDO::PARAM_INT);
       $requete->execute();
@@ -49,8 +52,9 @@
     }
     function lireGenreJeu($id)
     {
+			global $local;
       global $basededonnees;
-      $SQL_LIRE_GENRE_JEU = "SELECT * FROM jeuxVideo WHERE idGenre=:id";
+      $SQL_LIRE_GENRE_JEU = "SELECT ID, Nom,  description_".$local." AS description, idGenre, image FROM jeuxVideo WHERE idGenre=:id";
       $requete = $basededonnees->prepare($SQL_LIRE_GENRE_JEU);
       $requete->bindParam(':id', $id, PDO::PARAM_INT);
       $requete->execute();
@@ -60,8 +64,9 @@
     }
     function lireJeu($id)
     {
+			global $local;
       global $basededonnees;
-      $SQL_LIRE_JEU = "SELECT * FROM jeuxVideo WHERE ID = :id";
+      $SQL_LIRE_JEU = "SELECT ID, Nom,  description_".$local." AS description, idGenre, image FROM jeuxVideo WHERE ID = :id";
       $requete = $basededonnees->prepare($SQL_LIRE_JEU);
       $requete->bindParam(':id', $id, PDO::PARAM_INT);
       $requete->execute();
