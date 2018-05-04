@@ -1,5 +1,6 @@
 <?php
 	include_once "baseDeDonner.php";
+	$local = 'fr';
 	class DaoPublic
 	{
     function lireListe()
@@ -27,8 +28,9 @@
     function lireGenres()
     {
       global $basededonnees;
-      $SQL_LIRE_GENRES = "SELECT * FROM genre";
+      $SQL_LIRE_GENRES = "SELECT ID, Nom, description-:local AS description FROM genre";
       $requete = $basededonnees->prepare($SQL_LIRE_GENRES);
+			$requete->bindParam(':local', $local, PDO::PARAM_STR);
       $requete->execute();
       $genres = $requete->fetchAll();
 

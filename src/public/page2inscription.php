@@ -1,5 +1,5 @@
 <?php
-	include_once "configuration_dev.php";
+	include_once "../configuration_dev.php";
 	session_start();
 	$filtreValeurs = array();
 	$filtreValeurs['prenom'] = FILTER_SANITIZE_ENCODED;
