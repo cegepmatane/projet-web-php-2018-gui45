@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : localhost:3306
--- Généré le :  ven. 04 mai 2018 à 16:21
+-- Généré le :  ven. 04 mai 2018 à 16:55
 -- Version du serveur :  5.7.21
 -- Version de PHP :  7.1.13
 
@@ -31,15 +31,15 @@ SET time_zone = "+00:00";
 CREATE TABLE `genre` (
   `ID` int(11) NOT NULL,
   `Nom` varchar(50) NOT NULL,
-  `description-fr` text NOT NULL,
-  `description-en` text NOT NULL
+  `description_fr` text NOT NULL,
+  `description_en` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Déchargement des données de la table `genre`
 --
 
-INSERT INTO `genre` (`ID`, `Nom`, `description-fr`, `description-en`) VALUES
+INSERT INTO `genre` (`ID`, `Nom`, `description_fr`, `description_en`) VALUES
 (1, 'MMO', 'Massive multiplayer online', 'Massive multiplayer online'),
 (2, 'FPS', 'First person shooter', 'First person shooter'),
 (3, 'MOBA', 'Multiplayer online battle arena', 'Multiplayer online battle arena'),
@@ -54,8 +54,8 @@ INSERT INTO `genre` (`ID`, `Nom`, `description-fr`, `description-en`) VALUES
 CREATE TABLE `jeuxvideo` (
   `ID` int(100) NOT NULL,
   `Nom` varchar(50) NOT NULL,
-  `description-fr` varchar(1000) NOT NULL,
-  `description-en` text NOT NULL,
+  `description_fr` varchar(1000) NOT NULL,
+  `description_en` text NOT NULL,
   `idGenre` int(11) NOT NULL,
   `image` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
@@ -64,7 +64,7 @@ CREATE TABLE `jeuxvideo` (
 -- Déchargement des données de la table `jeuxvideo`
 --
 
-INSERT INTO `jeuxvideo` (`ID`, `Nom`, `description-fr`, `description-en`, `idGenre`, `image`) VALUES
+INSERT INTO `jeuxvideo` (`ID`, `Nom`, `description_fr`, `description_en`, `idGenre`, `image`) VALUES
 (1, 'Eve online', 'eve est un mmo rpg baser dans le futur et dans lespace ', 'eve is a mmo rpg based in the future and in space', 1, '../illustration/blue.png'),
 (2, 'world of warcraft ', 'word of warcraft est un mmo rpg', 'world of warcraft is a mmo rpg', 1, ''),
 (3, 'Battlefield 1', 'battlefield 1 est un fps de la ww1', 'battlefield 1 is a fps with a ww1 theme', 2, ''),
