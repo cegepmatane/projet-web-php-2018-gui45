@@ -3,7 +3,7 @@
 	if(!empty($_POST["ajouterGenre"]))
 	{
 		include_once "../dao/DaoAdmin.php";
-		$jeuDao = new JeuDAO();
+		$jeuDao = new DaoAdmin();
 
 		$filtreGenres = array();
 		$filtreGenres['nom'] = FILTER_SANITIZE_STRING;

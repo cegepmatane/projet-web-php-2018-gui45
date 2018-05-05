@@ -1,9 +1,9 @@
 <?php
 	include_once "connecterAdmin.php";
-	include_once "../dao/DAO.php";
+	include_once "../dao/DaoPublic.php";
 
 	$id = filter_var($_GET['id'], FILTER_SANITIZE_NUMBER_INT);
-	$jeuDao = new JeuDAO();
+	$jeuDao = new DaoPublic();
 	$genre= $jeuDao->lireGenre($id);
 
 	?>

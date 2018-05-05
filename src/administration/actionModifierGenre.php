@@ -1,8 +1,8 @@
 <?php
 	include_once "connecterAdmin.php";
 	if(!empty($_POST['nomGenre'])){
-		include_once "../dao/DAO.php";
-		$jeuDao = new JeuDAO();
+		include_once "../dao/DaoAdmin.php";
+		$jeuDao = new DaoAdmin();
 
 		$filtreGenres = array();
 		$filtreGenres['nomGenre'] = FILTER_SANITIZE_STRING;

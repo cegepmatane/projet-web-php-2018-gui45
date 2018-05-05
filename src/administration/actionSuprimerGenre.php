@@ -4,8 +4,8 @@
 
 		if($_POST['validerGenre'] == "oui")
 		{
-			include_once "../dao/DAO.php";
-			$jeuDao = new JeuDAO();
+			include_once "../dao/DaoAdmin.php";
+			$jeuDao = new DaoAdmin();
 			$listeJeux = $jeuDao->lireGenreJeu($_POST['id']);
 			if(count($listeJeux) < 1)
 			{

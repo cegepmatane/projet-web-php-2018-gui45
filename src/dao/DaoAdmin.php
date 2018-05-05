@@ -1,7 +1,7 @@
 <?php
 	include_once "baseDeDonner.php";
 	$local = 'fr';
-	class DaoPublic
+	class DaoAdmin
 	{
     function ajouterImage($image, $id)
 		{

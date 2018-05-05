@@ -1,6 +1,6 @@
 <?php
 	include_once "connecterAdmin.php";
-	include_once "../dao/DAO.php";
+	include_once "../dao/DaoPublic.php";
 
 	include "baseDeDonner.php";
 	include "actionModifierJeu.php";
@@ -9,7 +9,7 @@
 	include "actionModifierGenre.php";
 	include "actionSuprimerGenre.php";
 	include "actionAjouterGenre.php";
-	$jeudao = new JeuDAO();
+	$jeudao = new DaoPublic();
 	$genres = $jeudao->lireGenres();
 ?>
 <!doctype html>
