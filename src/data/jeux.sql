@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : localhost:3306
--- Généré le :  ven. 04 mai 2018 à 16:55
+-- Généré le :  ven. 04 mai 2018 à 17:22
 -- Version du serveur :  5.7.21
 -- Version de PHP :  7.1.13
 
@@ -32,7 +32,7 @@ CREATE TABLE `genre` (
   `ID` int(11) NOT NULL,
   `Nom` varchar(50) NOT NULL,
   `description_fr` text NOT NULL,
-  `description_en` text NOT NULL
+  `description_en` text
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
@@ -55,9 +55,9 @@ CREATE TABLE `jeuxvideo` (
   `ID` int(100) NOT NULL,
   `Nom` varchar(50) NOT NULL,
   `description_fr` varchar(1000) NOT NULL,
-  `description_en` text NOT NULL,
+  `description_en` text,
   `idGenre` int(11) NOT NULL,
-  `image` varchar(255) NOT NULL
+  `image` varchar(255) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
@@ -137,13 +137,13 @@ ALTER TABLE `membre`
 -- AUTO_INCREMENT pour la table `genre`
 --
 ALTER TABLE `genre`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT pour la table `jeuxvideo`
 --
 ALTER TABLE `jeuxvideo`
-  MODIFY `ID` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
+  MODIFY `ID` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
 
 --
 -- AUTO_INCREMENT pour la table `membre`
