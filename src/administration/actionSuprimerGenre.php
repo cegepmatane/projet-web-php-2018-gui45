@@ -5,12 +5,14 @@
 		if($_POST['validerGenre'] == "oui")
 		{
 			include_once "../dao/DaoAdmin.php";
-			$jeuDao = new DaoAdmin();
-			$listeJeux = $jeuDao->lireGenreJeu($_POST['id']);
+			include_once "../dao/DaoPublic.php";
+			$daoPublic = new DaoPublic();
+			$daoAdmin = new DaoAdmin();
+			$listeJeux = $daoPublic->lireGenreJeu($_POST['id']);
 			if(count($listeJeux) < 1)
 			{
 				$genre = filter_var($_POST['id'], FILTER_SANITIZE_NUMBER_INT);
-				$jeuDao->suprimerGenre($genre);
+				$daoAdmin->suprimerGenre($genre);
 				echo("<p>genre suprimer</p>");
 			}
 			else
