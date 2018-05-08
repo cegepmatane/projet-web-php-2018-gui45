@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : localhost:3306
--- Généré le :  ven. 04 mai 2018 à 17:22
+-- Généré le :  lun. 07 mai 2018 à 19:49
 -- Version du serveur :  5.7.21
 -- Version de PHP :  7.1.13
 
@@ -65,19 +65,20 @@ CREATE TABLE `jeuxvideo` (
 --
 
 INSERT INTO `jeuxvideo` (`ID`, `Nom`, `description_fr`, `description_en`, `idGenre`, `image`) VALUES
-(1, 'Eve online', 'eve est un mmo rpg baser dans le futur et dans lespace ', 'eve is a mmo rpg based in the future and in space', 1, '../illustration/blue.png'),
-(2, 'world of warcraft ', 'word of warcraft est un mmo rpg', 'world of warcraft is a mmo rpg', 1, ''),
-(3, 'Battlefield 1', 'battlefield 1 est un fps de la ww1', 'battlefield 1 is a fps with a ww1 theme', 2, ''),
-(4, 'the elder scrolls online', 'TESO est une mmo rpg dans l\'univer de elder scrolls', 'TESE is a mmo rpg based in the universe of elderscrolls', 1, ''),
-(5, 'call of duty', 'cod est un fps', 'cod is a fps', 2, ''),
-(7, 'counter strike', 'un jeu fps competitif multijoueur', 'a fps competive multiplayer game', 2, ''),
+(1, 'Eve online', 'eve est un mmo rpg baser dans le futur et dans lespace ', 'eve is a mmo rpg based in the future and in space', 1, '../illustration/miniatureblue.png'),
+(2, 'world of warcraft ', 'word of warcraft est un mmo rpg', 'world of warcraft is a mmo rpg', 1, '../illustration/miniature4vXKcKm.png'),
+(3, 'Battlefield 1', 'battlefield 1 est un fps de la ww1', 'battlefield 1 is a fps with a ww1 theme', 2, '../illustration/miniaturekv5 ! 1255basexp.png'),
+(4, 'the elder scrolls online', 'TESO est une mmo rpg dans l&#39;univer de elder scrolls', 'TESE is a mmo rpg based in the universe of elderscrolls', 1, '../illustration/miniatureNo-Mans-Sky-4-K-Wallpaper.jpg'),
+(5, 'call of duty', 'cod est un fps', 'cod is a fps', 2, '../illustration/miniaturei83^cimgpsh_orig.png'),
+(7, 'counter strike', 'un jeu fps competitif multijoueur', 'a fps competive multiplayer game', 2, '../illustration/miniaturesans titre.png'),
 (8, 'half life 2', 'un fps dont la trilogie ne ce conclura jamais', 'a trillogy that will never be completed', 2, '../illustration/miniaturebase.png'),
 (9, 'world of tanks', 'un jeu mmo / moba de tank', 'a mmo / moba with tanks', 1, '	\r\n../illustration/miniaturealecto.png'),
-(10, 'warthunder', 'une simulation mmo / moba de vehicule de guerre', 'a simulation mmo/ moba vehicular combat', 1, ''),
-(15, 'League of Legends', 'un moba', 'a moba', 3, ''),
-(16, 'Skyrim', 'un RPG', 'a rpg', 4, ''),
-(17, 'Fallout 4', 'un rpg', 'a rpg', 4, ''),
-(18, 'Dota', 'un moba', 'a moba', 3, '');
+(10, 'warthunder', 'une simulation mmo / moba de vehicule de guerre', 'a simulation mmo/ moba vehicular combat', 1, '../illustration/miniature2010_11_18_00_50_37.png'),
+(15, 'League of Legends', 'un moba', 'a moba', 3, '../illustration/miniature1450base.png'),
+(16, 'Skyrim', 'un RPG', 'a rpg', 4, '../illustration/miniatureSans titre 2.png'),
+(17, 'Fallout 4', 'un rpg', 'a rpg', 4, '../illustration/miniatureSans titre 21.png'),
+(18, 'Dota', 'un moba', 'a moba', 3, '../illustration/miniatureSans titre3.png'),
+(21, 'Escape from tarckov', 'un fps', NULL, 2, '../illustration/miniaturewyvern.jpg');
 
 -- --------------------------------------------------------
 
@@ -143,13 +144,13 @@ ALTER TABLE `genre`
 -- AUTO_INCREMENT pour la table `jeuxvideo`
 --
 ALTER TABLE `jeuxvideo`
-  MODIFY `ID` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
+  MODIFY `ID` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
 
 --
 -- AUTO_INCREMENT pour la table `membre`
 --
 ALTER TABLE `membre`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
