@@ -1,7 +1,7 @@
 <?php
   $id = filter_var($_GET['id'], FILTER_VALIDATE_INT);
-  require('../dao/DaoPublic.php');
-  $dao = new DaoPublic();
+  require('../dao/JeuDao.php');
+  $dao = new JeuDao();
   $jeu = $dao->lireJeu($id);
   require('../lib/fpdf/fpdf.php');
 
