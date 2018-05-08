@@ -1,9 +1,9 @@
 <?php
 	include_once "connecterAdmin.php";
-	include_once "../dao/DaoPublic.php";
+	include_once "../dao/GenreDao.php";
 
 	$id = filter_var($_GET['id'], FILTER_SANITIZE_NUMBER_INT);
-	$jeuDao = new DaoPublic();
+	$jeuDao = new GenreDao();
 	$genre= $jeuDao->lireGenre($id);
 
 	?>
@@ -27,8 +27,7 @@
 			<input type="submit" name="validerGenre" value="oui">
 			<input type="submit" name="validerGenre" value="non">
 		</form>
-		<a href="pageAdministration.php">retour</a>
-
+		<p><a href="pageAdministration.php">pageAdministration/</a>suprimerGenre</p>
 	</section>
 
 </body>

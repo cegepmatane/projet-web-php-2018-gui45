@@ -1,9 +1,11 @@
 <?php
 	include_once "connecterAdmin.php";
-	include_once "../dao/DaoPublic.php";
-	$jeuDAO = new DaoPublic();
-	$genre = $jeuDAO->LireGenre($_GET['id']);
-	$jeux = $jeuDAO->lireGenreJeu($_GET['id']);
+	include_once "../dao/GenreDao.php";
+	include_once "../dao/JeuDao.php";
+	$genreDao = new GenreDao();
+	$jeuDao = new JeuDao();
+	$genre = $genreDao->LireGenre($_GET['id']);
+	$jeux = $jeuDao->lireGenreJeu($_GET['id']);
 	//var_dump($genre);
 ?>
 <!doctype html>
@@ -45,6 +47,6 @@
 					<?php
 				}?>
 	</section>
-	<a href="pageAdministration.php">retour</a>
+	<p><a href="pageAdministration.php">pageAdministration/</a>modifierGenre</p>
 </body>
 </html>

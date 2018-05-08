@@ -41,6 +41,6 @@
 			}
 		?>
 	</section>
-
+	<a href="../accueil.php">retour ver l'acceuil</a>
 </body>
 </html>

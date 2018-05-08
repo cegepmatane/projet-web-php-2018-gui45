@@ -1,7 +1,7 @@
 <?php
 	include_once "connecterAdmin.php";
-	include_once "../dao/DaoPublic.php";
-	$jeuDao = new DaoPublic();
+	include_once "../dao/JeuDao.php";
+	$jeuDao = new JeuDao();
 	$id = filter_var($_GET['id'], FILTER_SANITIZE_NUMBER_INT);
 	$jeu = $jeuDao->lireJeu($id);
 
@@ -42,7 +42,6 @@
 			<input type="submit" value="valider">
 	</form>
 	</section>
-	<a href="pageAdministration.php">retour</a>
-
+	<p><a href="pageAdministration.php">pageAdministration/</a>modifierGenre</p>
 </body>
 </html>

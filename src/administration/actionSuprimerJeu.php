@@ -4,11 +4,11 @@
 	if(!empty($_POST['valider'])){
 		if($_POST['valider'] == "oui")
 		{
-			include_once "../dao/DaoAdmin.php";
+			include_once "../dao/JeuDao.php";
 
 			$jeu = filter_var($_POST['id'], FILTER_SANITIZE_NUMBER_INT);
 			$jeuDao = new DaoAdmin();
-			$jeuDao->suprimer($jeu);
+			$jeuDao->JeuDao($jeu);
 
 			echo("<p>jeu suprimer</p>");
 		}

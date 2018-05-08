@@ -1,9 +1,9 @@
 <?php
 	include_once "connecterAdmin.php";
-	include_once "../dao/DaoPublic.php";
+	include_once "../dao/JeuDao.php";
 
 	$id = filter_var($_GET['id'], FILTER_SANITIZE_NUMBER_INT);
-	$jeuDao = new DaoPublic();
+	$jeuDao = new JeuDao();
 	$jeu= $jeuDao->lireJeu($id);
 
 	?>
@@ -27,8 +27,7 @@
 			<input type="submit" name="valider" value="oui">
 			<input type="submit" name="valider" value="non">
 		</form>
-		<a href="pageAdministration.php">retour</a>
-
+		<p><a href="pageAdministration.php">pageAdministration/</a>suprimerJeu</p>
 	</section>
 
 </body>

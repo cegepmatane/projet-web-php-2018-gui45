@@ -27,7 +27,6 @@
 			<input type="submit" value="valider">
 		</form
 	</section>
-	<a href="pageAdministration.php">retour</a>
-
+	<p><a href="pageAdministration.php">pageAdministration/</a>ajouterGenre</p>
 </body>
 </html>

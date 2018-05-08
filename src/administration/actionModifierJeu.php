@@ -2,9 +2,9 @@
 	include_once "connecterAdmin.php";
 	if(!empty($_POST["modifier"]))
 	{
-		include_once "../dao/DaoAdmin.php";
+		include_once "../dao/JeuDao.php";
 
-		$jeuDao = new DaoAdmin();
+		$jeuDao = new JeuDao();
 
 		$filtreJeux = array();
 		$filtreJeux['nom'] = FILTER_SANITIZE_STRING;
