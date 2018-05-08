@@ -36,6 +36,6 @@
   			<input type="submit" value="soumettre">
     </form>
 	</section>
-	<a href="../accueil.php"><?=_("retour")?></a>
+	<p><a href="../accueil.php">accueil/</a>insciption</p>
 </body>
 </html>

@@ -30,6 +30,6 @@
 			<input type="submit" value="valider">
 
 	</section>
-	<a href="../accueil.php"><?=_("retour")?></a>
+	<p><a href="../accueil.php">accueil/</a>contact</p>
 </body>
 </html>

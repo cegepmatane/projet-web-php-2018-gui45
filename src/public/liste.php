@@ -1,8 +1,8 @@
 <?php
 	include_once "connecter.php";
-	include_once "../dao/DaoPublic.php";
+	include_once "../dao/GenreDao.php";
 	include_once "../configuration_dev.php";
-	$jeuDao = new DaoPublic();
+	$jeuDao = new GenreDao();
 	$genres = $jeuDao->lireGenres();
 	//print_r($jeux);
 
@@ -27,7 +27,7 @@
 				<?php
 			}?>
 		</div>
-		<a href="../accueil.php"><?=_("retour")?></a>
+		<p><a href="../accueil.php">accueil/</a>liste</p>
 	</body>
 	<link rel="stylesheet" type="text/css" href="style.css">
 	<link rel="stylesheet" type="text/css" href="styleListe.css">

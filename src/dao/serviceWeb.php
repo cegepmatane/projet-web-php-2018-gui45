@@ -1,8 +1,9 @@
 <?php
-  include_once "DaoPublic.php";
-
-  $dao = new DaoPublic();
-  $listeGenre = $dao->lireGenres();
+  include_once "GenreDao.php";
+  include_once "JeuDao.php";
+  $genreDao = new GenreDao();
+  $jeuDao = new JeuDao();
+  $listeGenre = $genreDao->lireGenres();
 
   header("Content-type: text/xml");
   echo '<?xml version="1.0" encoding="UTF-8"?>';
@@ -11,7 +12,7 @@
   <?php foreach($listeGenre as $genre){ ?>
     <<?=$genre['Nom']?>>
       <?php
-        $listeJeux = $dao->lireGenreJeu($genre['ID']);
+        $listeJeux = $jeuDao->lireGenreJeu($genre['ID']);
         foreach ($listeJeux as $jeu) { ?>
           <jeu>
             <nom><?=$jeu['Nom']?></nom>

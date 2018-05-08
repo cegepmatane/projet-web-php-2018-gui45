@@ -1,8 +1,8 @@
 <?php
 	include_once "connecter.php";
-	include_once "../dao/DaoPublic.php";
+	include_once "../dao/JeuDao.php";
 	include_once "../configuration_dev.php";
-	$jeuDao = new DaoPublic();
+	$jeuDao = new JeuDao();
 	$id = filter_var($_GET['id'], FILTER_SANITIZE_NUMBER_INT);
 	$item = $jeuDao->lireJeu($id);
 ?>
@@ -18,6 +18,6 @@
 		<h3><?=$item['Nom']?></h3>
 		<img src="<?=$item['image']?>">
 		<p><?php print_r($item['description']) ?></p>
-		<a href="liste.php"><?=_("retour")?></a>
+		<p><a href="../accueil.php">accueil/</a><a href="liste.php">liste/</a>details</p>
 	</body>
 </html>
