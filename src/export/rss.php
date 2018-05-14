@@ -22,6 +22,12 @@
 		<language>fr</language>
 		<sy:updatePeriod>hourly</sy:updatePeriod>
 		<sy:updateFrequency>1</sy:updateFrequency>
-
+    <?php foreach($genres as $genre){ ?>
+      <genre>
+        <id><?=$genre['ID']?></id>
+        <nom><?=$genre['Nom']?></nom>
+        <description><?=$genre['description']?></description>
+      </genre>
+    <?php } ?>
 	</channel>
 </rss>
