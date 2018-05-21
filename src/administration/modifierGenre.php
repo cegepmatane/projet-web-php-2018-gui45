@@ -40,9 +40,9 @@
 				{
 					?>
 					<h3>
-					<?=$jeu['Nom']?>
-					<a href="suprimerJeu.php?id=<?=$jeu['ID']?>">suprimer</a>
-					<a href="modifierJeu.php?id=<?=$jeu['ID']?>">modifier</a>
+					<?=$jeu->Nom?>
+					<a href="suprimerJeu.php?id=<?=$jeu->ID?>">suprimer</a>
+					<a href="modifierJeu.php?id=<?=$jeu->ID?>">modifier</a>
 					</h3>
 					<?php
 				}?>
