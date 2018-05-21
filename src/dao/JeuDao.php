@@ -54,7 +54,7 @@ class JeuDao
     $SQL_LIRE_LISTE = "SELECT ID, Nom,  description_".$local." AS description, idGenre, image FROM jeuxVideo";
     $requete = $basededonnees->prepare($SQL_LIRE_LISTE);
     $requete->execute();
-    $jeux = $requete->fetchAll();
+    $jeux = $requete->fetchAll(PDO::FETCH_OBJ);
 
     return $jeux;
   }
@@ -67,7 +67,7 @@ class JeuDao
     $requete->bindParam(':recherche', $recherche, PDO::PARAM_STR);
     $requete->bindParam(':recherche', $recherche, PDO::PARAM_STR);
     $requete->execute();
-    $jeux = $requete->fetchAll();
+    $jeux = $requete->fetchAll(PDO::FETCH_OBJ);
 
     return $jeux;
   }
@@ -79,7 +79,7 @@ class JeuDao
     $requete = $basededonnees->prepare($SQL_LIRE_GENRE_JEU);
     $requete->bindParam(':id', $id, PDO::PARAM_INT);
     $requete->execute();
-    $jeux = $requete->fetchAll();
+    $jeux = $requete->fetchAll(PDO::FETCH_OBJ);
 
     return $jeux;
   }
@@ -91,7 +91,7 @@ class JeuDao
     $requete = $basededonnees->prepare($SQL_LIRE_JEU);
     $requete->bindParam(':id', $id, PDO::PARAM_INT);
     $requete->execute();
-    $jeu = $requete->fetch();
+    $jeu = $requete->fetch(PDO::FETCH_OBJ);
 
     return $jeu;
   }
@@ -102,7 +102,7 @@ class JeuDao
     $requete = $basededonnees->prepare($SQL_RECHERCHER_LISTE);
     $requete->bindParam(':recherche', $recherche, PDO::PARAM_STR);
     $requete->execute();
-    $jeux = $requete->fetchAll();
+    $jeux = $requete->fetchAll(PDO::FETCH_OBJ);
 
     return $jeux;
   }

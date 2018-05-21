@@ -22,7 +22,7 @@
 	<section id="">
 		<header><h2>suprimer un jeu</h2></header>
 		<form method="POST" action="pageAdministration.php">
-			<label>voulez vous vraiment suprimer <?=$jeu['Nom']?></label>
+			<label>voulez vous vraiment suprimer <?=$jeu->Nom?></label>
 			<input type="hidden" name="id" value="<?=$id?>">
 			<input type="submit" name="valider" value="oui">
 			<input type="submit" name="valider" value="non">

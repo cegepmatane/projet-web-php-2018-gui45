@@ -15,10 +15,10 @@
 	<body>
 		<h1><?=_("Projet Liste")?></h1>
 		<h2><?=_("page detail")?></h2>
-		<h3><?=$item['Nom']?></h3>
-		<img src="<?=$item['image']?>">
-		<p><?php print_r($item['description']) ?></p>
-		<a href="../export/pdf.php?id=<?=$item['ID']?>">pdf de cet item</a>
+		<h3><?=$item->Nom?></h3>
+		<img src="<?=$item->image?>">
+		<p><?php print_r($item->description) ?></p>
+		<a href="../export/pdf.php?id=<?=$item->ID?>">pdf de cet item</a>
 		<p><a href="../accueil.php">accueil/</a><a href="liste.php">liste/</a>details</p>
 	</body>
 </html>

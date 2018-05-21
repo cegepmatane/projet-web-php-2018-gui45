@@ -10,15 +10,15 @@
 ?>
 <jeux>
   <?php foreach($listeGenre as $genre){ ?>
-    <<?=$genre['Nom']?>>
+    <<?=$genre->Nom?>>
       <?php
-        $listeJeux = $jeuDao->lireGenreJeu($genre['ID']);
+        $listeJeux = $jeuDao->lireGenreJeu($genre->ID);
         foreach ($listeJeux as $jeu) { ?>
           <jeu>
-            <nom><?=$jeu['Nom']?></nom>
-            <id><?=$jeu['ID']?></id>
+            <nom><?=$jeu->Nom?></nom>
+            <id><?=$jeu->ID?></id>
           </jeu>
         <?php }?>
-    </<?=$genre['Nom']?>>
+    </<?=$genre->Nom?>>
   <?php } ?>
 </jeux>

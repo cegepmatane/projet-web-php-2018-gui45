@@ -34,8 +34,8 @@
 				?>
 				<h3>
 					<?=$genre['Nom']?>
-					<a href="suprimerGenre.php?id=<?=$genre['ID']?>">suprimer</a>
-					<a href="modifierGenre.php?id=<?=$genre['ID']?>">modifier</a>
+					<a href="suprimerGenre.php?id=<?=$genre->ID?>">suprimer</a>
+					<a href="modifierGenre.php?id=<?=$genre->ID?>">modifier</a>
 				</h3>
 				<?php
 			}
