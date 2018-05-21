@@ -22,8 +22,8 @@
 			foreach($genres as $genre)
 			{
 				?>
-				<h3 onclick="appel(<?=$genre['Nom']?>)"><?=$genre['Nom']?></h3>
-				<div id="<?=$genre['Nom']?>"></div>
+				<h3 onclick="appel(<?=$genre->Nom?>)"><?=$genre->Nom?></h3>
+				<div id="<?=$genre->Nom?>"></div>
 				<?php
 			}?>
 		</div>

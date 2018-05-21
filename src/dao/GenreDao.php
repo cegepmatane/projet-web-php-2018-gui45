@@ -43,7 +43,7 @@ class GenreDao
     $SQL_LIRE_GENRES = "SELECT ID, Nom, description_".$local." AS description FROM genre";
     $requete = $basededonnees->prepare($SQL_LIRE_GENRES);
     $requete->execute();
-    $genres = $requete->fetchAll();
+    $genres = $requete->fetchAll(PDO::FETCH_OBJ);
 
     return $genres;
   }
@@ -55,7 +55,7 @@ class GenreDao
     $requete = $basededonnees->prepare($SQL_LIRE_GENRE);
     $requete->bindParam(':id', $id, PDO::PARAM_INT);
     $requete->execute();
-    $genre = $requete->fetch();
+    $genre = $requete->fetch(PDO::FETCH_OBJ);
 
     return $genre;
   }

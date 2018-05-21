@@ -22,7 +22,7 @@
 	<section id="">
 		<header><h2>suprimer un genre</h2></header>
 		<form method="POST" action="pageAdministration.php">
-			<label>voulez vous vraiment suprimer <?=$genre['Nom']?></label>
+			<label>voulez vous vraiment suprimer <?=$genre->Nom?></label>
 			<input type="hidden" name="id" value="<?=$id?>">
 			<input type="submit" name="validerGenre" value="oui">
 			<input type="submit" name="validerGenre" value="non">
