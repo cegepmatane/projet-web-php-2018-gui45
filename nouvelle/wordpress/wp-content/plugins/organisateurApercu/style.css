@@ -1,0 +1,9 @@
+#post{
+  background-color: gray;
+  height: 290px;
+  overflow: hidden;
+}
+#post a{
+  color: #3856b7;
+  margin-left:30%;
+}
