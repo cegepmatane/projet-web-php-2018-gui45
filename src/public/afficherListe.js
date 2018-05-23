@@ -20,7 +20,7 @@ function afficher(ajax)
     //console.log(xmlListeJeux[i]);
     nom = xmlListeJeux[i].getElementsByTagName('nom')[0].innerHTML;
     id = xmlListeJeux[i].getElementsByTagName('id')[0].innerHTML;
-    html += "<a href='detail.php?id=" + id + "'>" + nom + "</a>"
+    html += "<a href='detail/" + id + "/'>" + nom + "</a>"
   }
   courrant.innerHTML = html;
 }
