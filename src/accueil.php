@@ -43,11 +43,11 @@
 		<h1><?=_("Projet Liste")?></h1>
 		<h2><?=_("accueil")?></h2>
 		<div>
-			<a href="public/liste.php"><?=_("Page liste")?></a>
-			<a href="public/contact.php"><?=_("Page contact")?></a>
+			<a href="public/liste"><?=_("Page liste")?></a>
+			<a href="public/contact"><?=_("Page contact")?></a>
 		</div>
-		<a href="public/page1inscription.php"><?=_("s'inscrire")?></a>
-		<a href="public/connexion.php"><?=_("se connecter")?></a>
+		<a href="public/page1inscription"><?=_("s'inscrire")?></a>
+		<a href="public/connexion"><?=_("se connecter")?></a>
 		<div>
 			<form method="post" action="" id="formulaire-recherche">
 				<input type="text" name="recherche" id="recherche" onkeyup="rechercher()">

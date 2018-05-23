@@ -28,7 +28,7 @@
 			}?>
 		</div>
 		<a href="../export/excel.php">exporter en format Excel(Xlsx)</a>
-		<p><a href="../accueil.php">accueil/</a>liste</p>
+		<p><a href="../accueil">accueil/</a>liste</p>
 	</body>
 	<link rel="stylesheet" type="text/css" href="style.css">
 	<link rel="stylesheet" type="text/css" href="styleListe.css">
