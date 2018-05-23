@@ -23,7 +23,7 @@
 		<h2>Inscription</h2>
 	  <p>Inscription terminer avec succes</p>
     <div>
-      <a href="../accueil.php">retourner a l'accueil</a>
+      <a href="../accueil">retourner a l'accueil</a>
     </div>
 	</section>
 

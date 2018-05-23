@@ -11,7 +11,7 @@
 	<section id="">
 		<h1><?=_("Projet Liste")?></h1>
 		<h2><?=_("Inscription")?></h2>
-		<form method="POST" action="page2inscription.php">
+		<form method="POST" action="page2inscription">
       <div>
         <label for="prenom"><?=_("prenom")?></label>
         <input type="text" name="prenom" id="prenom">
@@ -35,6 +35,6 @@
 			<input type="submit" value="suivant">
     </form>
 	</section>
-	<p><a href="../accueil.php">accueil/</a>insciption</p>
+	<p><a href="../accueil">accueil/</a>insciption</p>
 </body>
 </html>

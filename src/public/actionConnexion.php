@@ -19,7 +19,7 @@
 		<h2>connexion</h2>
 	  <p>connexion terminer</p>
     <div>
-      <a href="../accueil.php">retourner a l'accueil</a>
+      <a href="../accueil">retourner a l'accueil</a>
     </div>
 	</section>
 

@@ -5,3 +5,9 @@ RewriteCond %{REQUEST_FILENAME} !-d
 
 RewriteRule ^liste$ liste.php
 RewriteRule ^detail/(.*)/$ detail.php?id=$1
+RewriteRule ^connexion$ connexion.php
+RewriteRule ^contact$ contact.php
+RewriteRule ^page1inscription$ page1inscription.php
+RewriteRule ^page2inscription$ page2inscription.php
+RewriteRule ^actionConnexion$ actionConnexion.php
+RewriteRule ^actionInscription$ actionInscription.php

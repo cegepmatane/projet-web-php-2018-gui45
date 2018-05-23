@@ -11,7 +11,7 @@
 	<section id="">
 		<h1><?=_("Projet Liste")?></h1>
 		<h2><?=_("Inscription")?></h2>
-		<form method="POST" action="actionConnexion.php">
+		<form method="POST" action="actionConnexion">
       <div>
         <label for="motDePasse"><?=_("mot De Passe")?></label>
         <input type="password" name="motDePasse" id="motDePasse">
@@ -23,6 +23,6 @@
   			<input type="submit" value="soumettre">
     </form>
 	</section>
-	<p><a href="../accueil.php">accueil/</a>connexion</p>
+	<p><a href="../accueil">accueil/</a>connexion</p>
 </body>
 </html>
