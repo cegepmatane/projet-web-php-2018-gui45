@@ -8,19 +8,19 @@
   $pdf = new FPDF();
   $pdf->AddPage();
   $pdf->SetFont('Arial','B',12);
-  $pdf->Write(10, 'Jeu : ' . $jeu['Nom']);
+  $pdf->Write(10, 'Jeu : ' . $jeu->Nom);
   $pdf->Ln();
   $pdf->Ln();
-  $pdf->Write(10, 'Id : ' . $jeu['ID']);
+  $pdf->Write(10, 'Id : ' . $jeu->ID);
   $pdf->Ln();
   $pdf->Ln();
-  $pdf->Write(10, 'Description : ' . $jeu['description']);
+  $pdf->Write(10, 'Description : ' . $jeu->description);
   $pdf->Ln();
   $pdf->Ln();
-  $pdf->Write(10, 'idGenre : ' . $jeu['idGenre']);
+  $pdf->Write(10, 'idGenre : ' . $jeu->idGenre);
   $pdf->Ln();
   $pdf->Ln();
-  $pdf->Write(10, 'image : ' . $jeu['image']);
+  $pdf->Write(10, 'image : ' . $jeu->image);
 
   $pdf->Output();
 ?>

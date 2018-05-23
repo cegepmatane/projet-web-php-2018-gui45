@@ -13,7 +13,7 @@ if(!file_exists($fichier)){
   $genres= $genreDao->lireGenres();
 
   foreach($genres as $genre){
-    $feuille->setCellValue('A'. $genre['ID'], $genre['Nom']);
+    $feuille->setCellValue('A'. $genre->ID, $genre->Nom);
   }
 
 
