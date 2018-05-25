@@ -1,0 +1,12 @@
+RewriteEngine On
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+RewriteRule ^actionAjouterGenre.php$ - [F]
+RewriteRule ^actionAjouterJeu.php$ - [F]
+RewriteRule ^actionModifierGenre.php$ - [F]
+RewriteRule ^actionModifierJeu.php$ - [F]
+RewriteRule ^actionSuprimerrGenre.php$ - [F]
+RewriteRule ^actionSuprimerJeu.php$ - [F]
+RewriteRule ^baseDeDonner.php$ - [F]
