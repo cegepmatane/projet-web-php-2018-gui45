@@ -59,7 +59,7 @@
 		<h3><?=_("liste")?></h3>
 		<?php foreach($jeux as $jeu){ ?>
 		<div>
-				<a href="public/detail.php?id=<?=$jeu['ID']?>"><?=$jeu['Nom']?></a>
+				<a href="public/detail/<?=$jeu->ID?>/"><?=$jeu->Nom?></a>
 		</div>
 	<?php } ?>
 	</body>

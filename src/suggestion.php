@@ -7,6 +7,6 @@ $jeux = $dao->rechercherSuggestion($recherche);
 
 <ul>
 <?php foreach($jeux as $jeu){ ?>
-	<li><a href="#" onclick="afficher('<?=$jeu['Nom']?>')"><?=$jeu['Nom']?></a></li>
+	<li><a href="#" onclick="afficher('<?=$jeu->Nom?>')"><?=$jeu->Nom?></a></li>
 <?php } ?>
 </ul>
