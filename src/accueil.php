@@ -23,7 +23,10 @@
 		console.log("keyup");
 		ajax = new Ajax();
 		donnee = document.getElementById("recherche").value;
-		ajax.executer("GET", "http://localhost/projet-web-php-2018-gui45/src/suggestion.php", "valeur="+donnee, recevoir);
+		if(donnee != "")
+			ajax.executer("GET", "http://localhost/projet-web-php-2018-gui45/src/suggestion.php", "valeur="+donnee, recevoir);
+		else
+			document.getElementById("suggestion").innerHTML = "";
 	}
 	function afficher(valeur)
 	{
