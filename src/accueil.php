@@ -26,7 +26,7 @@
 		if(donnee != "")
 			ajax.executer("GET", "http://localhost/projet-web-php-2018-gui45/src/suggestion.php", "valeur="+donnee, recevoir);
 		else
-			document.getElementById("suggestions").innerHTML = "";
+			document.getElementById("sugestions").innerHTML = "";
 	}
 	function afficher(valeur)
 	{
@@ -37,6 +37,7 @@
 	{
 		//console.log(ajax.responseText);
 		document.getElementById("sugestions").innerHTML = ajax.responseText;
+
 	}
 	</script>
 	<meta charset="utf-8">
