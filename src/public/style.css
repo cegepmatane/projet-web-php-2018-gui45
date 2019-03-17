@@ -4,3 +4,18 @@ a{
 img{
 	width:20%;
 }
+#formulaire-recherche {
+	position: relative;
+	display: inline-block;
+}
+.sugestions{
+	position: absolute;
+  z-index: 99;
+  top: 100%;
+  left: 0;
+  right: 0;
+	background-color: #CCCCCC;
+}
+.sugestions a{
+	padding: 10px;
+}

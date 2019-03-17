@@ -26,7 +26,7 @@
 		if(donnee != "")
 			ajax.executer("GET", "http://localhost/projet-web-php-2018-gui45/src/suggestion.php", "valeur="+donnee, recevoir);
 		else
-			document.getElementById("suggestion").innerHTML = "";
+			document.getElementById("suggestions").innerHTML = "";
 	}
 	function afficher(valeur)
 	{
@@ -36,11 +36,12 @@
 	function recevoir(ajax)
 	{
 		//console.log(ajax.responseText);
-		document.getElementById("suggestion").innerHTML = ajax.responseText;
+		document.getElementById("sugestions").innerHTML = ajax.responseText;
 	}
 	</script>
 	<meta charset="utf-8">
 	<title>accueil</title>
+	<link rel="stylesheet" type="text/css" href="public/style.css">
 </head>
 	<body>
 		<h1><?=_("Projet Liste")?></h1>
@@ -55,9 +56,10 @@
 			<form method="post" action="" id="formulaire-recherche">
 				<input type="text" name="recherche" id="recherche" onkeyup="rechercher()">
 				<input type="submit" value="rechercher" name="action-recherche">
+				<div id="sugestions" class="sugestions">
+				</div>
 			</form>
-			<div id="suggestion">
-			</div>
+
 		</div>
 		<h3><?=_("liste")?></h3>
 		<?php foreach($jeux as $jeu){ ?>
