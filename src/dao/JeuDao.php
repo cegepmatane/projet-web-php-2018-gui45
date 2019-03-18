@@ -87,7 +87,7 @@ class JeuDao
   {
     global $local;
     global $basededonnees;
-    $SQL_LIRE_JEU = "SELECT ID, Nom,  description_".$local." AS description, idGenre, image FROM jeuxVideo WHERE ID = :id";
+    $SQL_LIRE_JEU = "SELECT ID, Nom,  description_".$local." AS description, idGenre, image, date FROM jeuxVideo WHERE ID = :id";
     $requete = $basededonnees->prepare($SQL_LIRE_JEU);
     $requete->bindParam(':id', $id, PDO::PARAM_INT);
     $requete->execute();
