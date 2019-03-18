@@ -1,0 +1,14 @@
+UPDATE `jeuxvideo` SET `date` = '2003' WHERE `jeuxvideo`.`ID` = 1
+UPDATE `jeuxvideo` SET `date` = '2004' WHERE `jeuxvideo`.`ID` = 2
+UPDATE `jeuxvideo` SET `date` = '2016' WHERE `jeuxvideo`.`ID` = 3
+UPDATE `jeuxvideo` SET `date` = '2014' WHERE `jeuxvideo`.`ID` = 4
+UPDATE `jeuxvideo` SET `date` = '2003' WHERE `jeuxvideo`.`ID` = 5
+UPDATE `jeuxvideo` SET `date` = '2000' WHERE `jeuxvideo`.`ID` = 7
+UPDATE `jeuxvideo` SET `date` = '2004' WHERE `jeuxvideo`.`ID` = 8
+UPDATE `jeuxvideo` SET `date` = '2009' WHERE `jeuxvideo`.`ID` = 9
+UPDATE `jeuxvideo` SET `date` = '2013' WHERE `jeuxvideo`.`ID` = 10
+UPDATE `jeuxvideo` SET `date` = '2009' WHERE `jeuxvideo`.`ID` = 15
+UPDATE `jeuxvideo` SET `date` = '2011' WHERE `jeuxvideo`.`ID` = 16
+UPDATE `jeuxvideo` SET `date` = '2015' WHERE `jeuxvideo`.`ID` = 17
+UPDATE `jeuxvideo` SET `date` = '2013' WHERE `jeuxvideo`.`ID` = 18
+UPDATE `jeuxvideo` SET `date` = '2016' WHERE `jeuxvideo`.`ID` = 21
